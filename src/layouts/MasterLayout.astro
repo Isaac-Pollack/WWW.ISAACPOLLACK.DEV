@@ -1,38 +1,86 @@
 ---
+// import "@fontsource/work-sans";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
 export interface Props {
-	title: string;
+	title?: string;
+	description?: string;
 }
-
-const { title } = Astro.props;
+const { title, description } = Astro.props as Props;
+const canonicalURL = new URL(Astro.url).href;
 ---
 
 <!DOCTYPE html>
 <html lang="en">
 	<head>
+		<!-- Core -->
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
-		<meta name="google-site-verification" content="wYzroSxVYEW1VS0GCiwtLRPld6pYj_IJvH-wk7QTPWY" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
+		<link rel="icon" type="image/svg+xml" href="favicon.svg" />
+		<meta name="description" content="Isaac Pollack Portfolio" />
+		<meta
+			name="keywords"
+			content="HTML, CSS, JavaScript, Astro, Netlify, Portfolio"
+		/>
+		<meta name="author" content="Isaac Pollack" />
+		<meta name="robots" content="index, nofollow" />
+		<!-- <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" /> -->
+
+		<!-- Open Graph -->
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content={canonicalURL} />
+		<meta property="og:title" content={title} />
+		<meta property="og:description" content={description} />
+		<meta property="og:image" content="ogimage.png" />
+		<meta property="og:image:alt" content="Isaac Pollack Portfolio" />
+		<meta property="og:site_name" content="Isaac Pollack Portfolio" />
+		<meta property="og:locale" content="en_AU" />
+
+		<!-- Twitter -->
+		<meta property="twitter:card" content="summary_large_image" />
+		<meta property="twitter:url" content={canonicalURL} />
+		<meta name="twitter:site" content="@Isaac_Pollack" />
+		<meta name="twitter:creator" content="@Isaac_Pollack" />
+		<meta property="twitter:title" content={title} />
+		<meta property="twitter:description" content={description} />
+		<meta property="twitter:image" content="ogimage.png" />
+
+		<!-- Astro + Sitemap -->
 		<title>{title}</title>
+		<meta
+			name="google-site-verification"
+			content="wYzroSxVYEW1VS0GCiwtLRPld6pYj_IJvH-wk7QTPWY"
+		/>
+		<meta name="generator" content={Astro.generator} />
+		<meta name="title" content={title} />
+		<meta name="description" content={description} />
+		<link rel="canonical" href={canonicalURL} />
 	</head>
 
 	<body>
+		<Header />
 		<slot />
+		<Footer />
+		<style is:global>
+			:root {
+				--accent: 124, 58, 237;
+				--accent-gradient: linear-gradient(
+					45deg,
+					rgb(var(--accent)),
+					#da62c4 30%,
+					white 60%
+				);
+			}
+			html {
+				font-family: system-ui, sans-serif;
+				background-color: #f6f6f6;
+			}
+			code {
+				font-family: Menlo, Monaco, Lucida Console, Liberation Mono,
+					DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
+			}
+		</style>
 	</body>
-
 </html>
-<style is:global>
-	:root {
-		--accent: 124, 58, 237;
-		--accent-gradient: linear-gradient(45deg, rgb(var(--accent)), #da62c4 30%, white 60%);
-	}
-	html {
-		font-family: system-ui, sans-serif;
-		background-color: #F6F6F6;
-	}
-	code {
-		font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
-			Bitstream Vera Sans Mono, Courier New, monospace;
-	}
-</style>
