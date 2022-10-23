@@ -63,6 +63,7 @@ const canonicalURL = new URL(Astro.url).href;
 		<Header />
 		<slot />
 		<Footer />
+
 		<style is:global>
 			:root {
 				--accent: 124, 58, 237;
@@ -75,7 +76,6 @@ const canonicalURL = new URL(Astro.url).href;
 			}
 			html {
 				font-family: system-ui, sans-serif;
-				background-color: #f6f6f6;
 			}
 			code {
 				font-family: Menlo, Monaco, Lucida Console, Liberation Mono,
