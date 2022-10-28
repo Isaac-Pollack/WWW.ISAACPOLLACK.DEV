@@ -1,0 +1,22 @@
+---
+import ProjectCard from "@components/ProjectCard.astro";
+import Master from "@layouts/Master.astro";
+const allProjects = await Astro.glob("./projects/*.md*");
+---
+
+<Master
+	title="Isaac Pollack - Projects"
+	description="My chosen works on display in my portfolio, my proudest achievements and my biggest lessons.">
+	<div class="flex items-center justify-center h-[80vh]">
+		<div>
+			<!-- Cards -->
+			<ul>
+				{
+					allProjects.map((project) => (
+						<ProjectCard url={project.url} title={project.frontmatter.title} />
+					))
+				}
+			</ul>
+		</div>
+	</div>
+</Master>

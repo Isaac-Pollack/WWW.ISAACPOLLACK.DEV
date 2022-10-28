@@ -1,0 +1,12 @@
+---
+import Master from "./Master.astro";
+const { frontmatter } = Astro.props;
+---
+
+<Master title={frontmatter.title} description={frontmatter.description}>
+	<div class="flex items-center justify-center h-[80vh]">
+		<article>
+			<slot />
+		</article>
+	</div>
+</Master>

@@ -1,65 +1,112 @@
-<footer class="footer footer-center text-center mt-5 bg-gray-100">
-	<div class="text-slate-800/50 border-t border-slate-500/25">
-		<p class="mt-3 pb-3">
-			Built with Astro
-			<svg
-				class="inline"
-				xmlns="http://www.w3.org/2000/svg"
-				xmlns:xlink="http://www.w3.org/1999/xlink"
-				width="24px"
-				height="24px"
-				viewBox="0 0 24 24"
-				version="1.1">
-				<defs>
-					<linearGradient
-						id="linear0"
-						gradientUnits="userSpaceOnUse"
-						x1="882.997"
-						y1="27.1132"
-						x2="638.955"
-						y2="866.902"
-						gradientTransform="matrix(0.01875,0,0,0.01875,0,0)">
-						<stop
-							offset="0"
-							style="stop-color:rgb(0%,0%,7.843137%);stop-opacity:1;"></stop>
-						<stop
-							offset="1"
-							style="stop-color:rgb(8.235294%,1.568627%,14.901961%);stop-opacity:1;"
-						></stop>
-					</linearGradient>
-					<linearGradient
-						id="linear1"
-						gradientUnits="userSpaceOnUse"
-						x1="1001.68"
-						y1="652.45"
-						x2="790.326"
-						y2="1094.91"
-						gradientTransform="matrix(0.01875,0,0,0.01875,0,0)">
-						<stop
-							offset="0"
-							style="stop-color:rgb(100%,8.627451%,22.352941%);stop-opacity:1;"
-						></stop>
-						<stop
-							offset="1"
-							style="stop-color:rgb(100%,8.627451%,22.352941%);stop-opacity:0;"
-						></stop>
-					</linearGradient>
-				</defs>
-				<g id="surface1">
-					<path
-						style=" stroke:none;fill-rule:evenodd;fill:url(#linear0);"
-						d="M 15.28125 1.773438 C 15.464844 2 15.558594 2.304688 15.742188 2.917969 L 19.804688 16.253906 C 18.300781 15.476562 16.671875 14.914062 14.949219 14.609375 L 12.304688 5.675781 C 12.261719 5.53125 12.128906 5.429688 11.976562 5.429688 C 11.824219 5.429688 11.6875 5.53125 11.644531 5.679688 L 9.035156 14.605469 C 7.304688 14.90625 5.664062 15.472656 4.15625 16.253906 L 8.238281 2.914062 C 8.425781 2.304688 8.515625 2 8.699219 1.773438 C 8.859375 1.574219 9.070312 1.417969 9.308594 1.324219 C 9.578125 1.214844 9.894531 1.214844 10.53125 1.214844 L 13.445312 1.214844 C 14.085938 1.214844 14.40625 1.214844 14.671875 1.324219 C 14.910156 1.417969 15.121094 1.574219 15.28125 1.773438 Z M 15.28125 1.773438 "
-					></path>
-					<path
-						style=" stroke:none;fill-rule:evenodd;fill:rgb(100%,36.470588%,0.392157%);fill-opacity:1;"
-						d="M 15.769531 16.890625 C 15.097656 17.460938 13.761719 17.851562 12.222656 17.851562 C 10.335938 17.851562 8.75 17.265625 8.332031 16.472656 C 8.179688 16.925781 8.148438 17.445312 8.148438 17.777344 C 8.148438 17.777344 8.050781 19.402344 9.179688 20.535156 C 9.179688 19.949219 9.65625 19.472656 10.246094 19.472656 C 11.25 19.472656 11.25 20.351562 11.25 21.0625 C 11.25 21.085938 11.25 21.105469 11.25 21.125 C 11.25 22.207031 11.910156 23.136719 12.851562 23.527344 C 12.710938 23.238281 12.632812 22.914062 12.632812 22.570312 C 12.632812 21.539062 13.238281 21.15625 13.941406 20.707031 C 14.503906 20.351562 15.125 19.957031 15.554688 19.164062 C 15.777344 18.753906 15.90625 18.277344 15.90625 17.777344 C 15.90625 17.46875 15.855469 17.167969 15.769531 16.890625 Z M 15.769531 16.890625 "
-					></path>
-					<path
-						style=" stroke:none;fill-rule:evenodd;fill:url(#linear1);"
-						d="M 15.769531 16.890625 C 15.097656 17.460938 13.761719 17.851562 12.222656 17.851562 C 10.335938 17.851562 8.75 17.265625 8.332031 16.472656 C 8.179688 16.925781 8.148438 17.445312 8.148438 17.777344 C 8.148438 17.777344 8.050781 19.402344 9.179688 20.535156 C 9.179688 19.949219 9.65625 19.472656 10.246094 19.472656 C 11.25 19.472656 11.25 20.351562 11.25 21.0625 C 11.25 21.085938 11.25 21.105469 11.25 21.125 C 11.25 22.207031 11.910156 23.136719 12.851562 23.527344 C 12.710938 23.238281 12.632812 22.914062 12.632812 22.570312 C 12.632812 21.539062 13.238281 21.15625 13.941406 20.707031 C 14.503906 20.351562 15.125 19.957031 15.554688 19.164062 C 15.777344 18.753906 15.90625 18.277344 15.90625 17.777344 C 15.90625 17.46875 15.855469 17.167969 15.769531 16.890625 Z M 15.769531 16.890625 "
-					></path>
-				</g>
-			</svg>
+---
+const copyrightYear = new Date().getFullYear();
+---
+
+<!-- Footer -->
+<footer class="footer footer-center text-center mt-5">
+	<div class="flex flex-col">
+		<p>&copy {copyrightYear} Isaac Pollack</p>
+		<p class="mt-3">
+			Built with <a
+				href="https://astro.build/"
+				target="_blank"
+				rel="noopener noreferrer"
+				class="font-medium text-blue-600 dark:text-blue-500 no-underline hover:underline hover:decoration-gray-800"
+				>Astro</a
+			> and hosted on <a
+				href="https://www.netlify.com/"
+				target="_blank"
+				rel="noopener noreferrer"
+				class="font-medium text-blue-600 dark:text-blue-500 no-underline hover:underline hover:decoration-gray-800"
+				>Netlify</a
+			>
 		</p>
+	</div>
+	<div class="flex flex-wrap mt-2 justify-center">
+		<!-- Github -->
+		<div
+			class="m-3 transition-transform ease-in-out hover:-translate-y-1 duration-300">
+			<a
+				href="https://github.com/Isaac-Pollack/"
+				target="_blank"
+				rel="noopener noreferrer"
+				><button
+					type="button"
+					class="shadow-md text-white bg-[#24292F] hover:bg-[#3A424C] font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center mr-2 mb-2">
+					<svg
+						class="mr-2 -ml-1 w-4 h-4 object-cover"
+						aria-hidden="true"
+						focusable="false"
+						data-prefix="fab"
+						data-icon="github"
+						role="img"
+						xmlns="http://www.w3.org/2000/svg"
+						viewBox="0 0 496 512"
+						><path
+							fill="currentColor"
+							d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3 .3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5 .3-6.2 2.3zm44.2-1.7c-2.9 .7-4.9 2.6-4.6 4.9 .3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3 .7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3 .3 2.9 2.3 3.9 1.6 1 3.6 .7 4.3-.7 .7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3 .7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3 .7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"
+						></path>
+					</svg>
+					Github
+				</button>
+			</a>
+		</div>
+		<!-- LinkedIn -->
+		<div
+			class="m-3 transition-transform ease-in-out hover:-translate-y-1 duration-300">
+			<a
+				href="https://www.linkedin.com/in/isaac-pollack/"
+				target="_blank"
+				rel="noopener noreferrer"
+				><button
+					type="button"
+					class="shadow-md text-white bg-[#0A66C2] hover:bg-[#0C80F3] font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center mr-2 mb-2">
+					<svg
+						class="mr-2 -ml-1 w-4 h-4 invert"
+						aria-hidden="true"
+						focusable="false"
+						data-prefix="fab"
+						data-icon="linkedin"
+						role="img"
+						xmlns="http://www.w3.org/2000/svg"
+						width="24"
+						height="24"
+						viewBox="0 0 24 24"
+						><path
+							d="M4.98 3.5c0 1.381-1.11 2.5-2.48 2.5s-2.48-1.119-2.48-2.5c0-1.38 1.11-2.5 2.48-2.5s2.48 1.12 2.48 2.5zm.02 4.5h-5v16h5v-16zm7.982 0h-4.968v16h4.969v-8.399c0-4.67 6.029-5.052 6.029 0v8.399h4.988v-10.131c0-7.88-8.922-7.593-11.018-3.714v-2.155z"
+						></path>
+					</svg>
+					LinkedIn
+				</button>
+			</a>
+		</div>
+		<!-- Twitter -->
+		<div
+			class="m-3 transition-transform ease-in-out hover:-translate-y-1 duration-300">
+			<a
+				href="https://twitter.com/Isaac_Pollack"
+				target="_blank"
+				rel="noopener noreferrer">
+				<button
+					type="button"
+					class="shadow-md text-white bg-[#0C85D0] hover:bg-[#1DA0F2] font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center mr-2 mb-2">
+					<svg
+						class="mr-2 -ml-1 w-4 h-4"
+						aria-hidden="true"
+						focusable="false"
+						data-prefix="fab"
+						data-icon="twitter"
+						role="img"
+						xmlns="http://www.w3.org/2000/svg"
+						viewBox="0 0 512 512"
+						><path
+							fill="currentColor"
+							d="M459.4 151.7c.325 4.548 .325 9.097 .325 13.65 0 138.7-105.6 298.6-298.6 298.6-59.45 0-114.7-17.22-161.1-47.11 8.447 .974 16.57 1.299 25.34 1.299 49.06 0 94.21-16.57 130.3-44.83-46.13-.975-84.79-31.19-98.11-72.77 6.498 .974 12.99 1.624 19.82 1.624 9.421 0 18.84-1.3 27.61-3.573-48.08-9.747-84.14-51.98-84.14-102.1v-1.299c13.97 7.797 30.21 12.67 47.43 13.32-28.26-18.84-46.78-51.01-46.78-87.39 0-19.49 5.197-37.36 14.29-52.95 51.65 63.67 129.3 105.3 216.4 109.8-1.624-7.797-2.599-15.92-2.599-24.04 0-57.83 46.78-104.9 104.9-104.9 30.21 0 57.5 12.67 76.67 33.14 23.72-4.548 46.46-13.32 66.6-25.34-7.798 24.37-24.37 44.83-46.13 57.83 21.12-2.273 41.58-8.122 60.43-16.24-14.29 20.79-32.16 39.31-52.63 54.25z"
+						></path>
+					</svg>
+					Twitter
+				</button>
+			</a>
+		</div>
 	</div>
 </footer>

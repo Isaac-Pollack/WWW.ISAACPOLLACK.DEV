@@ -1,3 +1,110 @@
 ---
+import ThemeToggler from "./ThemeToggler.astro";
+import NavLink from "./NavLink.astro";
 
+const NavLinks = [
+	{
+		name: "About",
+		href: "/about",
+	},
+	{
+		name: "Projects",
+		href: "/projects",
+	},
+	{
+		name: "Uses",
+		href: "/uses",
+	},
+	{
+		name: "Contact",
+		href: "/contact",
+	},
+];
 ---
+
+<!-- Header -->
+<header
+	class="fixed top-0 left-0 right-0 bg-slate-100 dark:bg-slate-900 bg-opacity-70 dark:bg-opacity-70 backdrop-blur z-10">
+	<!-- Navbar -->
+	<div
+		class="flex justify-between items-center max-w-6xl pr-8 pl-6 py-4 mx-auto">
+		<a
+			href="/"
+			rel="noopener noreferrer"
+			aria-label="Home"
+			class="text-2xl tracking-wide font-extrabold text-gray-900 dark:text-white py-2 pr-2 transition-transform ease-in-out hover:-translate-y-1 duration-300">
+			<h1>Isaac <span class="text-orange-600">Pollack</span></h1>
+			<!-- TODO: Swap eachothers colors on hover -->
+		</a>
+
+		<nav class="hidden md:block space-x-3">
+			<!-- {NavLinks.map((link) => <NavLink {...link} />)} TODO: Re-enable -->
+		</nav>
+		<div class="hidden md:block">
+			<ThemeToggler />
+		</div>
+		<!-- Burger Menu -->
+		<div
+			class="md:hidden flex items-center transition-transform ease-in-out hover:-translate-y-1 duration-300"
+			id="styled-svg">
+			<button class="outline-none menu-button p-2">
+				<svg
+					class="w-6 h-6 text-gray-500 stroke-current"
+					x-show="! showMenu"
+					fill="none"
+					stroke-linecap="round"
+					stroke-linejoin="round"
+					stroke-width="2"
+					viewBox="0 00 24 24"
+					><path d="m4 6h16M4 12h16M4 18h16"><path> </path></path>
+				</svg>
+			</button>
+		</div>
+	</div>
+	<!-- Mobile Navbar -->
+	<div class="hidden mobile-menu">
+		<div class="relative -z-10">
+			<div
+				class="flex flex-col justify-center items-center gap-12 fixed top-0 left-0 w-screen h-screen px-8 py-20 bg-slate-100 dark:bg-slate-900 border-b border-b-slate-700 animate-[menu_0.6s_ease] md:hidden">
+				<nav class="flex flex-col gap-4">
+					{NavLinks.map((link) => <NavLink {...link} />)}
+				</nav>
+				<div class="flex flex-row space-x-4">
+					<!-- TODO: Fix animation on theme toggle -->
+					<ThemeToggler />
+					<button
+						type="button"
+						aria-label="Close menu"
+						class="p-2 transition-transform ease-in-out hover:-translate-y-1 duration-300 exit text-gray-500">
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							width="24"
+							height="24"
+							viewBox="0 0 24 24"
+							fill="none"
+							stroke="currentColor"
+							stroke-width="2"
+							stroke-linecap="round"
+							stroke-linejoin="round"
+							><polyline points="9 10 4 15 9 20"></polyline><path
+								d="M20 4v7a4 4 0 0 1-4 4H4"></path>
+						</svg>
+					</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</header>
+
+<script>
+	// Menu Logic
+	const btn = document.querySelector("button.menu-button");
+	const menu = document.querySelector(".mobile-menu");
+	const exit = document.querySelector(".exit");
+	btn.addEventListener("click", () => {
+		menu.classList.toggle("hidden");
+	});
+	exit.addEventListener("click", () => {
+		menu.classList.toggle("hidden");
+	});
+</script>
