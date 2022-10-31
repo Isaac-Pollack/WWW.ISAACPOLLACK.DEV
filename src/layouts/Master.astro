@@ -68,11 +68,19 @@ const canonicalURL = new URL(Astro.url).href;
 
 	<body
 		class="bg-slate-100 dark:bg-slate-900 text-slate-800 dark:text-slate-200">
+		<!-- Header -->
 		<Header />
+
 		<!-- Content -->
-		<main>
-			<slot />
-		</main>
+		<div class="flex items-center justify-center h-[80vh]">
+			<div class="container">
+				<main>
+					<slot />
+				</main>
+			</div>
+		</div>
+
+		<!-- Footer -->
 		<Footer />
 
 		<style is:global>
@@ -88,12 +96,11 @@ const canonicalURL = new URL(Astro.url).href;
 			}
 
 			#styled-svg:hover button svg {
-				stroke: #0f172a;
-				//TODO: dark mode hover is broken, change to white
+				stroke: white;
 			}
 
 			.exit:hover svg {
-				stroke: #0f172a;
+				stroke: white;
 			}
 		</style>
 	</body>

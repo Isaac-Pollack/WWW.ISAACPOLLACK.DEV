@@ -1,7 +1,19 @@
 ---
-const { title, url } = Astro.props;
+const { title, url, name } = Astro.props;
 ---
 
-<li>
-	<a href={url}>{title}</a>
-</li>
+<a href={url} aria-label={`link to ${title}`}>
+	<div
+		class="flex items-center h-full w-full p-4 space-x-4 text-gray-700 rounded-lg shadow-xl hover:border-gray-500 hover:border-2 bg-gray-200 dark:bg-gray-800 dark:text-gray-300 transition-transform ease-in-out hover:-translate-y-1 duration-300">
+		<divas
+			class="p-2 text-indigo-700 bg-indigo-100 rounded-full dark:text-indigo-100 dark:bg-indigo-700">
+			<svg class="w-8 h-8" fill="currentColor" viewBox="0 0 20 20"
+				><path
+					fill-rule="evenodd"
+					d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z"
+					clip-rule="evenodd"></path>
+			</svg>
+		</divas>
+		<h3 class="text-2xl font-semibold">{title}</h3>
+	</div>
+</a>

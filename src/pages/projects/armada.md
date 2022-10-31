@@ -1,13 +1,12 @@
 ---
 layout: ../../layouts/ProjectLayout.astro
 title: 'Isaac Pollack - Armada'
-pubDate: 2022-07-01
+name: Armada
 description: 'This is the first post of my new Astro blog.'
-author: 'Astro Learner'
 image:
     url: 'https://astro.build/assets/blog/astro-1-release-update/cover.jpeg' 
     alt: 'The Astro logo with the word One.'
-tags: ["astro", "blogging", "learning in public"]
+langs: ["Javascript", "HTML/CSS", "Game"]
 ---
 # My First Blog Post
 

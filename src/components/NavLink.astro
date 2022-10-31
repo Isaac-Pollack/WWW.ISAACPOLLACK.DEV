@@ -5,14 +5,14 @@ export interface Props {
 }
 
 const { href, name } = Astro.props;
-const isCurrent = Astro.url.pathname.startsWith(href);
+const isCurrent = Astro.url.pathname.endsWith(href);
 ---
 
 <a
 	href={href}
 	aria-current={isCurrent ? "page" : "false"}
+	aria-label={`link to ${name}`}
 	rel="noopener noreferrer"
-	:disabled
 	class:list={[
 		"px-2 py-1 font-medium text-lg hover:text-sky-800 dark:hover:text-sky-200 text-center",
 		isCurrent
