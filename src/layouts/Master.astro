@@ -73,7 +73,7 @@ const canonicalURL = new URL(Astro.url).href;
 
 		<!-- Content -->
 		<div class="flex items-center justify-center h-[80vh]">
-			<div class="container">
+			<div class="container mt-8">
 				<main>
 					<slot />
 				</main>
@@ -101,6 +101,10 @@ const canonicalURL = new URL(Astro.url).href;
 
 			.exit:hover svg {
 				stroke: white;
+			}
+
+			.accordion-content {
+				transition: max-height 0.3s ease-out, padding 0.3s ease;
 			}
 		</style>
 	</body>

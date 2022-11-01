@@ -5,17 +5,130 @@ import Master from "@layouts/Master.astro";
 <Master
 	title="Isaac Pollack - Uses"
 	description="My chosen tools for every day use, whether that be for fun, or professionally.">
-	<div
-		class="bg-white dark:bg-slate-900 rounded-lg drop-shadow-2xl p-5 md:p-14 mx-2">
-		<div class="text-center">
-			<h2
-				class="text-4xl tracking-tight leading-10 font-extrabold text-gray-900 sm:text-5xl sm:leading-none md:text-6xl dark:text-white">
-				Isaac <span class="text-orange-600">Pollack</span>
-			</h2>
-			<h3
-				class="text-xl md:text-3xl mt-10 before:block before:absolute before:-inset-1 before:-skew-y-3 before:bg-gray-800 relative inline-block">
-				<span class="relative text-white">Coming Soon</span>
-			</h3>
+	<!-- Temp Font-Awesome -->
+	<link
+		href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+		rel="stylesheet"
+	/>
+
+	<!-- Uses Accordion -->
+	<div class="grid place-items-center flex flex-nowrap">
+		<div class="w-6/12 mx-auto rounded border">
+			<div class="px-10 pt-10 shadow-sm text-black dark:text-white">
+				<h1 class="font-semibold text-2xl">Uses</h1>
+				<p class="text-slate-600">
+					Inspired by <a href="https://uses.tech/" target="_blank">uses.tech</a>
+					by <a href="https://wesbos.com/" target="_blank">Wes Bos</a>. These
+					are the tools I use!
+				</p>
+
+				<!-- Divider -->
+				<div class="h-1 w-full mx-auto border-b my-5"></div>
+
+				<!-- Option Wrapper -->
+				<div class="transition hover:bg-indigo-100">
+					<div
+						class="accordion-header cursor-pointer transition flex space-x-5 px-5 items-center h-16">
+						<i class="fas fa-plus"></i>
+						<h2>💻 Hardware</h2>
+					</div>
+					<!-- Content -->
+					<div class="accordion-content px-5 pt-0 overflow-hidden max-h-0">
+						<p class="leading-6 font-light pl-9 text-justify pb-4"></p>
+						<p>Monitors: 2x MSI Optix MAG274QRF QHD 165Hz G-Sync HDR IPS 27"</p>
+						<p>
+							Keyboard: Keychron K5 SE Wireless - Low Profile Gateron Brown
+							Mechanical (Hot-Swappable)
+						</p>
+						<p>Mouse:</p>
+						<p>Headphones:</p>
+					</div>
+				</div>
+
+				<!-- Option Wrapper -->
+				<div class="transition hover:bg-indigo-50">
+					<div
+						class="accordion-header cursor-pointer transition flex space-x-5 px-5 items-center h-16">
+						<i class="fas fa-plus"></i>
+						<h2>🍦 Software</h2>
+					</div>
+					<div class="accordion-content px-5 pt-0 overflow-hidden max-h-0">
+						<p class="leading-6 font-light pl-9 text-justify"></p>
+						<p>Placeholder:</p>
+						<button
+							class="rounded-full bg-indigo-600 text-white font-medium font-lg px-6 py-2 my-5 ml-9"
+							>Learn more</button
+						>
+					</div>
+				</div>
+
+				<!-- Option Wrapper -->
+				<div class="transition hover:bg-indigo-50">
+					<div
+						class="accordion-header cursor-pointer transition flex space-x-5 px-5 items-center h-16">
+						<i class="fas fa-plus"></i>
+						<h2 class="font-medium">👩‍💻 Editors</h2>
+					</div>
+					<div class="accordion-content px-5 pt-0 overflow-hidden max-h-0">
+						<p class="leading-6 font-light pl-9 text-justify"></p><p>
+							Placeholder:
+						</p>
+
+						<button
+							class="rounded-full bg-indigo-600 text-white font-medium font-lg px-6 py-2 my-5 ml-9"
+							>Learn more</button
+						>
+					</div>
+				</div>
+
+				<!-- Option Wrapper -->
+				<div class="transition hover:bg-indigo-50">
+					<div
+						class="accordion-header cursor-pointer transition flex space-x-5 px-5 items-center h-16">
+						<i class="fas fa-plus"></i>
+						<h2 class="font-medium">⚙️ Config</h2>
+					</div>
+					<div class="accordion-content px-5 pt-0 overflow-hidden max-h-0">
+						<p class="leading-6 font-light pl-9 text-justify"></p><p>
+							Placeholder:
+						</p>
+
+						<button
+							class="rounded-full bg-indigo-600 text-white font-medium font-lg px-6 py-2 my-5 ml-9"
+							>Learn more</button
+						>
+					</div>
+				</div>
+				<!-- Divider -->
+				<div class="h-1 w-full mx-auto border-b my-5"></div>
+				<p class="text-center text-slate-400 pb-6">Updated: 01/11/2022</p>
+			</div>
 		</div>
+
+		<script>
+			const accordionHeader = document.querySelectorAll(".accordion-header");
+			accordionHeader.forEach((header) => {
+				header.addEventListener("click", function () {
+					const accordionContent =
+						header.parentElement.querySelector(".accordion-content");
+					let accordionMaxHeight = accordionContent.style.maxHeight;
+
+					// Condition handling
+					if (accordionMaxHeight == "0px" || accordionMaxHeight.length == 0) {
+						accordionContent.style.maxHeight = `${
+							accordionContent.scrollHeight + 32
+						}px`;
+						header.querySelector(".fas").classList.remove("fa-plus");
+						header.querySelector(".fas").classList.add("fa-minus");
+						header.parentElement.classList.add("bg-indigo-50");
+					} else {
+						accordionContent.style.maxHeight = `0px`;
+						header.querySelector(".fas").classList.add("fa-plus");
+						header.querySelector(".fas").classList.remove("fa-minus");
+						header.parentElement.classList.remove("bg-indigo-50");
+					}
+				});
+			});
+		</script>
 	</div>
 </Master>
