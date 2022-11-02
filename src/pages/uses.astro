@@ -1,10 +1,11 @@
 ---
 import Master from "@layouts/Master.astro";
+import UseCategory from "@components/UseCategory.astro";
 ---
 
 <Master
 	title="Isaac Pollack - Uses"
-	description="My chosen tools for every day use, whether that be for fun, or professionally.">
+	description="My chosen tools for every day use, whether that be at work or at home, for fun or professionally.">
 	<!-- Temp Font-Awesome -->
 	<link
 		href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
@@ -13,95 +14,112 @@ import Master from "@layouts/Master.astro";
 
 	<!-- Uses Accordion -->
 	<div class="grid place-items-center flex flex-nowrap">
-		<div class="w-6/12 mx-auto rounded border">
+		<div
+			class="w-9/12 mx-auto rounded border border-slate-500 dark:border-white">
 			<div class="px-10 pt-10 shadow-sm text-black dark:text-white">
 				<h1 class="font-semibold text-2xl">Uses</h1>
-				<p class="text-slate-600">
-					Inspired by <a href="https://uses.tech/" target="_blank">uses.tech</a>
-					by <a href="https://wesbos.com/" target="_blank">Wes Bos</a>. These
-					are the tools I use!
+				<p class="text-slate-600 dark:text-slate-400">
+					Inspired by <a
+						href="https://uses.tech/"
+						target="_blank"
+						class="font-medium text-blue-600 dark:text-blue-500 no-underline hover:underline dark:hover:decoration-white hover:decoration-gray-800 underline-offset-2"
+						>uses.tech</a
+					>
+					by <a
+						href="https://wesbos.com/"
+						target="_blank"
+						class="font-medium text-blue-600 dark:text-blue-500 no-underline hover:underline dark:hover:decoration-white hover:decoration-gray-800 underline-offset-2"
+						>Wes Bos</a
+					>. These are the tools I use!
 				</p>
 
 				<!-- Divider -->
-				<div class="h-1 w-full mx-auto border-b my-5"></div>
-
-				<!-- Option Wrapper -->
-				<div class="transition hover:bg-indigo-100">
-					<div
-						class="accordion-header cursor-pointer transition flex space-x-5 px-5 items-center h-16">
-						<i class="fas fa-plus"></i>
-						<h2>💻 Hardware</h2>
-					</div>
-					<!-- Content -->
-					<div class="accordion-content px-5 pt-0 overflow-hidden max-h-0">
-						<p class="leading-6 font-light pl-9 text-justify pb-4"></p>
-						<p>Monitors: 2x MSI Optix MAG274QRF QHD 165Hz G-Sync HDR IPS 27"</p>
-						<p>
-							Keyboard: Keychron K5 SE Wireless - Low Profile Gateron Brown
-							Mechanical (Hot-Swappable)
-						</p>
-						<p>Mouse:</p>
-						<p>Headphones:</p>
-					</div>
+				<div class="h-1 w-full mx-auto border-b my-5 dark:border-slate-400">
 				</div>
 
-				<!-- Option Wrapper -->
-				<div class="transition hover:bg-indigo-50">
-					<div
-						class="accordion-header cursor-pointer transition flex space-x-5 px-5 items-center h-16">
-						<i class="fas fa-plus"></i>
-						<h2>🍦 Software</h2>
+				<UseCategory emoji="💻" title="Hardware">
+					<div class="flex flex-col">
+						<div class="overflow-x-auto sm:-mx-6 lg:-mx-8">
+							<div class="py-2 inline-block min-w-full sm:px-6 lg:px-8">
+								<div class="overflow-x-auto">
+									<table
+										class="min-w-full text-gray-900 dark:text-white whitespace-nowrap text-sm font-medium">
+										<tbody>
+											<tr class="border-b">
+												<td class="px-6 py-4">CPU</td>
+												<td class="px-6 py-4"> Intel 9700K</td>
+											</tr>
+											<tr class="border-b">
+												<td class="px-6 py-4">GPU</td>
+												<td class="px-6 py-4"> NVIDIA 1060TI</td>
+											</tr>
+											<tr class="border-b">
+												<td class="px-6 py-4">Motherboard</td>
+												<td class="px-6 py-4"> ASUS ROG</td>
+											</tr>
+											<tr class="border-b">
+												<td class="px-6 py-4">Memory</td>
+												<td class="px-6 py-4">
+													Corsair Vengeance LPX 32GB DDR4
+												</td>
+											</tr>
+											<tr class="border-b">
+												<td class="px-6 py-4">Monitors</td>
+												<td class="px-6 py-4">
+													MSI Optix MAG274QRF QHD 165Hz G-Sync HDR IPS 27"
+												</td>
+											</tr>
+											<tr class="border-b">
+												<td class="px-6 py-4">Keyboard</td>
+												<td class="px-6 py-4">
+													Keychron K5 SE Wireless - Low Profile Gateron Brown
+												</td>
+											</tr>
+											<tr class="border-b">
+												<td class="px-6 py-4">Mouse</td>
+												<td class="px-6 py-4"> Razer Deathadder</td>
+											</tr>
+											<tr class="border-b">
+												<td class="px-6 py-4">Headset</td>
+												<td class="px-6 py-4"> Steelseries Arctic 3</td>
+											</tr>
+											<tr class="border-b">
+												<td class="px-6 py-4">Webcam</td>
+												<td class="px-6 py-4"> Razer Kiyo</td>
+											</tr>
+											<tr class="border-b">
+												<td class="px-6 py-4">Laptop</td>
+												<td class="px-6 py-4"> WINDOWS</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
 					</div>
-					<div class="accordion-content px-5 pt-0 overflow-hidden max-h-0">
-						<p class="leading-6 font-light pl-9 text-justify"></p>
-						<p>Placeholder:</p>
-						<button
-							class="rounded-full bg-indigo-600 text-white font-medium font-lg px-6 py-2 my-5 ml-9"
-							>Learn more</button
-						>
-					</div>
-				</div>
+				</UseCategory>
 
-				<!-- Option Wrapper -->
-				<div class="transition hover:bg-indigo-50">
-					<div
-						class="accordion-header cursor-pointer transition flex space-x-5 px-5 items-center h-16">
-						<i class="fas fa-plus"></i>
-						<h2 class="font-medium">👩‍💻 Editors</h2>
-					</div>
-					<div class="accordion-content px-5 pt-0 overflow-hidden max-h-0">
-						<p class="leading-6 font-light pl-9 text-justify"></p><p>
-							Placeholder:
-						</p>
+				<UseCategory emoji="🍦" title="Software">
+					<p>Notion</p>
+					<p>Bitwarden</p>
+					<p>Spotify</p>
+				</UseCategory>
 
-						<button
-							class="rounded-full bg-indigo-600 text-white font-medium font-lg px-6 py-2 my-5 ml-9"
-							>Learn more</button
-						>
-					</div>
-				</div>
+				<UseCategory emoji="👩‍💻" title="Editors">
+					<p>PyCharm</p>
+					<p>VSCode</p>
+				</UseCategory>
 
-				<!-- Option Wrapper -->
-				<div class="transition hover:bg-indigo-50">
-					<div
-						class="accordion-header cursor-pointer transition flex space-x-5 px-5 items-center h-16">
-						<i class="fas fa-plus"></i>
-						<h2 class="font-medium">⚙️ Config</h2>
-					</div>
-					<div class="accordion-content px-5 pt-0 overflow-hidden max-h-0">
-						<p class="leading-6 font-light pl-9 text-justify"></p><p>
-							Placeholder:
-						</p>
+				<UseCategory emoji="⚙️" title="Config">
+					<p>VSCode</p>
+				</UseCategory>
 
-						<button
-							class="rounded-full bg-indigo-600 text-white font-medium font-lg px-6 py-2 my-5 ml-9"
-							>Learn more</button
-						>
-					</div>
-				</div>
 				<!-- Divider -->
-				<div class="h-1 w-full mx-auto border-b my-5"></div>
-				<p class="text-center text-slate-400 pb-6">Updated: 01/11/2022</p>
+				<div class="h-1 w-full mx-auto border-b my-5 dark:border-slate-400">
+				</div>
+				<p class="text-center text-slate-600 dark:text-slate-400 pb-6">
+					Updated: 02/11/2022
+				</p>
 			</div>
 		</div>
 
@@ -120,12 +138,20 @@ import Master from "@layouts/Master.astro";
 						}px`;
 						header.querySelector(".fas").classList.remove("fa-plus");
 						header.querySelector(".fas").classList.add("fa-minus");
-						header.parentElement.classList.add("bg-indigo-50");
+						header.parentElement.classList.add("bg-indigo-100");
+						header.parentElement.classList.add("dark:bg-slate-800");
+						header.parentElement.classList.add("border");
+						header.parentElement.classList.add("border-slate-500");
+						header.parentElement.classList.add("dark:border-white");
 					} else {
 						accordionContent.style.maxHeight = `0px`;
 						header.querySelector(".fas").classList.add("fa-plus");
 						header.querySelector(".fas").classList.remove("fa-minus");
-						header.parentElement.classList.remove("bg-indigo-50");
+						header.parentElement.classList.remove("bg-indigo-100");
+						header.parentElement.classList.remove("dark:bg-slate-800");
+						header.parentElement.classList.remove("border");
+						header.parentElement.classList.remove("border-slate-500");
+						header.parentElement.classList.remove("dark:border-white");
 					}
 				});
 			});
