@@ -37,7 +37,7 @@ import UseCategory from "@components/UseCategory.astro";
 				<div class="h-1 w-full mx-auto border-b my-5 dark:border-slate-400">
 				</div>
 
-				<UseCategory emoji="💻" title="Hardware">
+				<UseCategory emoji="🖱️" title="Hardware">
 					<div class="flex flex-col">
 						<div class="overflow-x-auto sm:-mx-6 lg:-mx-8">
 							<div class="py-2 inline-block min-w-full sm:px-6 lg:px-8">
@@ -45,6 +45,10 @@ import UseCategory from "@components/UseCategory.astro";
 									<table
 										class="min-w-full text-gray-900 dark:text-white whitespace-nowrap text-sm font-medium">
 										<tbody>
+											<tr class="border-b">
+												<td class="px-6 py-4">Laptop</td>
+												<td class="px-6 py-4"> WINDOWS</td>
+											</tr>
 											<tr class="border-b">
 												<td class="px-6 py-4">CPU</td>
 												<td class="px-6 py-4"> Intel 9700K</td>
@@ -87,10 +91,6 @@ import UseCategory from "@components/UseCategory.astro";
 												<td class="px-6 py-4">Webcam</td>
 												<td class="px-6 py-4"> Razer Kiyo</td>
 											</tr>
-											<tr class="border-b">
-												<td class="px-6 py-4">Laptop</td>
-												<td class="px-6 py-4"> WINDOWS</td>
-											</tr>
 										</tbody>
 									</table>
 								</div>
@@ -100,25 +100,108 @@ import UseCategory from "@components/UseCategory.astro";
 				</UseCategory>
 
 				<UseCategory emoji="🍦" title="Software">
-					<p>Notion</p>
-					<p>Bitwarden</p>
-					<p>Spotify</p>
+					<h3 class="mb-2">
+						<strong>Editors:</strong>
+					</h3>
+					<ul class="list-disc m-2">
+						<li class="ml-8">
+							VSCode with the <a
+								href="https://marketplace.visualstudio.com/items?itemName=Hermitter.oh-lucy-vscode"
+								class="font-medium text-blue-600 dark:text-blue-500 no-underline hover:underline dark:hover:decoration-white hover:decoration-gray-800 underline-offset-2x"
+								>oh lucy</a
+							> theme, the <a
+								href="https://www.jetbrains.com/lp/mono/"
+								class="font-medium text-blue-600 dark:text-blue-500 no-underline hover:underline dark:hover:decoration-white hover:decoration-gray-800 underline-offset-2x"
+								>Jetbrains Mono
+							</a>font, without ligatures and <a
+								href="https://marketplace.visualstudio.com/items?itemName=PKief.material-icon-theme"
+								class="font-medium text-blue-600 dark:text-blue-500 no-underline hover:underline dark:hover:decoration-white hover:decoration-gray-800 underline-offset-2x"
+								>Material Icon Theme</a
+							>
+						</li>
+						<li class="ml-8">
+							<a
+								href="https://www.jetbrains.com/pycharm/"
+								class="font-medium text-blue-600 dark:text-blue-500 no-underline hover:underline dark:hover:decoration-white hover:decoration-gray-800 underline-offset-2x"
+								>Jetbrains PyCharm</a
+							> for any Python development.
+						</li>
+					</ul>
+
+					<p class="mb-2">
+						<strong>Browser:</strong>
+						<a
+							href="https://www.mozilla.org/en-US/firefox/developer/"
+							class="font-medium text-blue-600 dark:text-blue-500 no-underline hover:underline dark:hover:decoration-white hover:decoration-gray-800 underline-offset-2x">
+							Firefox Dev
+						</a>
+					</p>
+					<p class="mb-2">
+						<strong>Version Control:</strong>
+						<a
+							href="https://www.gitkraken.com/"
+							class="font-medium text-blue-600 dark:text-blue-500 no-underline hover:underline dark:hover:decoration-white hover:decoration-gray-800 underline-offset-2x">
+							Gitkraken
+						</a> - always.
+					</p>
+					<p class="mb-2">
+						<strong>Databases:</strong>
+						<a
+							href="https://www.jetbrains.com/datagrip/"
+							class="font-medium text-blue-600 dark:text-blue-500 no-underline hover:underline dark:hover:decoration-white hover:decoration-gray-800 underline-offset-2x">
+							Jetbrains DataGrip
+						</a>
+					</p>
+					<p class="mb-2">
+						<strong>Organisation:</strong>
+						<a
+							href="https://www.notion.so/"
+							class="font-medium text-blue-600 dark:text-blue-500 no-underline hover:underline dark:hover:decoration-white hover:decoration-gray-800 underline-offset-2x">
+							Notion
+						</a>
+					</p>
+					<p class="mb-2">
+						<strong>Social:</strong>
+						<a
+							href="https://discord.com/"
+							class="font-medium text-blue-600 dark:text-blue-500 no-underline hover:underline dark:hover:decoration-white hover:decoration-gray-800 underline-offset-2x">
+							Discord
+						</a>
+					</p>
 				</UseCategory>
 
-				<UseCategory emoji="👩‍💻" title="Editors">
-					<p>PyCharm</p>
-					<p>VSCode</p>
-				</UseCategory>
-
-				<UseCategory emoji="⚙️" title="Config">
-					<p>VSCode</p>
+				<UseCategory emoji="💻" title="Mac">
+					<p class="mb-2">
+						<strong>Package Manager:</strong>
+						<a
+							href="https://brew.sh/"
+							class="font-medium text-blue-600 dark:text-blue-500 no-underline hover:underline dark:hover:decoration-white hover:decoration-gray-800 underline-offset-2x">
+							Homebrew
+						</a>
+					</p>
+					<p class="mb-2">
+						<strong>API:</strong>
+						<a
+							href="https://insomnia.rest/"
+							class="font-medium text-blue-600 dark:text-blue-500 no-underline hover:underline dark:hover:decoration-white hover:decoration-gray-800 underline-offset-2x">
+							Insomnia
+						</a>
+					</p>
+					<p class="mb-2">
+						<strong>Documentation:</strong>
+						<a
+							href="https://kapeli.com/dash"
+							class="font-medium text-blue-600 dark:text-blue-500 no-underline hover:underline dark:hover:decoration-white hover:decoration-gray-800 underline-offset-2x">
+							Dash
+						</a>
+					</p>
 				</UseCategory>
 
 				<!-- Divider -->
 				<div class="h-1 w-full mx-auto border-b my-5 dark:border-slate-400">
 				</div>
 				<p class="text-center text-slate-600 dark:text-slate-400 pb-6">
-					Updated: 02/11/2022
+					Updated: 05/11/2022
 				</p>
 			</div>
 		</div>

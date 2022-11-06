@@ -4,18 +4,87 @@ import Master from "@layouts/Master.astro";
 
 <Master
 	title="Isaac Pollack - Contact"
-	description="Contact me via a number of methods, get in touch!.">
-	<div
-		class="bg-white dark:bg-slate-900 rounded-lg drop-shadow-2xl p-5 md:p-14 mx-2">
-		<div class="text-center">
-			<h2
-				class="text-4xl tracking-tight leading-10 font-extrabold text-gray-900 sm:text-5xl sm:leading-none md:text-6xl dark:text-white">
-				Isaac <span class="text-orange-600">Pollack</span>
-			</h2>
-			<h3
-				class="text-xl md:text-3xl mt-10 before:block before:absolute before:-inset-1 before:-skew-y-3 before:bg-gray-800 relative inline-block">
-				<span class="relative text-white">Coming Soon</span>
-			</h3>
+	description="Contact me via a number of methods, get in touch!">
+	<div class="flex items-center">
+		<div
+			class="w-full rounded shadow-lg p-8 m-4 md:max-w-4xl md:mx-auto border">
+			<h1 class="block w-full text-center mb-6 text-xl font-bold">Contact</h1>
+			<!-- Success -->
+			<div class="hidden block text-emerald-700 text-center pb-4" id="result">
+				<p
+					class="whitespace-nowrap text-md px-2 py-0.5 bg-emerald-100 rounded-full">
+					Message sent!
+				</p>
+			</div>
+			<form
+				class="mb-4 md:flex md:flex-wrap md:justify-between"
+				name="contact"
+				method="post"
+				data-netlify="true"
+				onsubmit="showDiv">
+				<div class="flex flex-col mb-4 md:w-full">
+					<label
+						class="mb-2 uppercase tracking-wide font-semibold text-lg dark:text-white"
+						for="name">Name</label
+					>
+					<input
+						class="border py-2 px-3 text-black"
+						type="text"
+						name="name"
+						id="name"
+						required
+					/>
+				</div>
+			</form>
+			<div class="flex flex-col mb-4 md:w-full">
+				<label
+					class="mb-2 uppercase font-semibold text-lg dark:text-white"
+					for="email">Email</label
+				>
+				<input
+					class="border py-2 px-3 text-black"
+					type="email"
+					name="email"
+					id="email"
+					required
+				/>
+			</div>
+			<div class="flex flex-col mb-4 md:w-full">
+				<label
+					class="mb-2 uppercase font-semibold text-lg dark:text-white"
+					for="phone">Phone</label
+				>
+				<input
+					class="border py-2 px-3 text-black"
+					type="tel"
+					name="phone"
+					id="phone"
+				/>
+			</div>
+			<div class="flex flex-col mb-6 md:w-full">
+				<label
+					class="mb-2 uppercase font-semibold text-lg text-black dark:text-white"
+					for="message">Message</label
+				>
+				<textarea
+					class="border py-2 px-3 text-black"
+					name="message"
+					id="message"
+					required></textarea>
+			</div>
+			<div class="flex flex-col mb-6 md:w-full">
+				<button
+					type="submit"
+					class="block bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+					>Send</button
+				>
+			</div>
 		</div>
 	</div>
+
+	<script>
+		function showDiv() {
+			document.getElementById("result").style.display = "block";
+		}
+	</script>
 </Master>
