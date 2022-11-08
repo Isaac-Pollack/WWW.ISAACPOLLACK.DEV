@@ -20,71 +20,75 @@ import Master from "@layouts/Master.astro";
 				class="mb-4 md:flex md:flex-wrap md:justify-between"
 				name="contact"
 				method="post"
-				data-netlify="true"
-				onsubmit="showDiv">
+				data-netlify="true">
 				<div class="flex flex-col mb-4 md:w-full">
 					<label
 						class="mb-2 uppercase tracking-wide font-semibold text-lg dark:text-white"
 						for="name">Name</label
 					>
 					<input
-						class="border py-2 px-3 text-black"
+						class="border border-neutral-400 py-2 px-3 text-black"
 						type="text"
 						name="name"
 						id="name"
 						required
 					/>
 				</div>
+				<div class="flex flex-col mb-4 md:w-full">
+					<label
+						class="mb-2 uppercase font-semibold text-lg dark:text-white"
+						for="email">Email</label
+					>
+					<input
+						class="border border-neutral-400 py-2 px-3 text-black"
+						type="email"
+						name="email"
+						id="email"
+						required
+					/>
+				</div>
+				<div class="flex flex-col mb-4 md:w-full">
+					<label
+						class="mb-2 uppercase font-semibold text-lg dark:text-white"
+						for="phone">Phone</label
+					>
+					<input
+						class="border border-neutral-400 py-2 px-3 text-black"
+						type="tel"
+						name="phone"
+						id="phone"
+					/>
+				</div>
+				<div class="flex flex-col mb-6 md:w-full">
+					<label
+						class="mb-2 uppercase font-semibold text-lg text-black dark:text-white"
+						for="message">Message</label
+					>
+					<textarea
+						class="border border-neutral-400 py-2 px-3 text-black"
+						name="message"
+						id="message"
+						required></textarea>
+				</div>
+				<div class="flex flex-col mb-6 md:w-full">
+					<button
+						type="submit"
+						class="block bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+						>Send</button
+					>
+				</div>
 			</form>
-			<div class="flex flex-col mb-4 md:w-full">
-				<label
-					class="mb-2 uppercase font-semibold text-lg dark:text-white"
-					for="email">Email</label
-				>
-				<input
-					class="border py-2 px-3 text-black"
-					type="email"
-					name="email"
-					id="email"
-					required
-				/>
-			</div>
-			<div class="flex flex-col mb-4 md:w-full">
-				<label
-					class="mb-2 uppercase font-semibold text-lg dark:text-white"
-					for="phone">Phone</label
-				>
-				<input
-					class="border py-2 px-3 text-black"
-					type="tel"
-					name="phone"
-					id="phone"
-				/>
-			</div>
-			<div class="flex flex-col mb-6 md:w-full">
-				<label
-					class="mb-2 uppercase font-semibold text-lg text-black dark:text-white"
-					for="message">Message</label
-				>
-				<textarea
-					class="border py-2 px-3 text-black"
-					name="message"
-					id="message"
-					required></textarea>
-			</div>
-			<div class="flex flex-col mb-6 md:w-full">
-				<button
-					type="submit"
-					class="block bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-					>Send</button
-				>
-			</div>
 		</div>
 	</div>
-
-	<script>
-		function showDiv() {
-			document.getElementById("result").style.display = "block";
-		}
-	</script>
 </Master>
+
+<script>
+	const form = document.querySelector("form");
+	const resultDiv = document.getElementById("result");
+
+	form.onsubmit = (el) => {
+		el.preventDefault();
+		console.log("Message sent!");
+		resultDiv.style.display = "block";
+	};
+</script>
