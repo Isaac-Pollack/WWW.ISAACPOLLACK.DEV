@@ -1,19 +1,13 @@
 ---
-const { title, url, name } = Astro.props;
+const { title, url, description, image, langs } = Astro.props;
 ---
 
 <a href={url} aria-label={`link to ${title}`}>
 	<div
-		class="flex items-center h-full w-full p-4 space-x-4 text-gray-700 rounded-lg shadow-xl bg-gray-200 dark:bg-gray-800 dark:text-gray-300 transition-transform ease-in-out hover:-translate-y-1 duration-300 hover:border-gray-500 hover:border">
-		<divas
-			class="p-2 text-indigo-700 bg-indigo-100 rounded-full dark:text-indigo-100 dark:bg-indigo-700">
-			<svg class="w-8 h-8" fill="currentColor" viewBox="0 0 20 20"
-				><path
-					fill-rule="evenodd"
-					d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z"
-					clip-rule="evenodd"></path>
-			</svg>
-		</divas>
-		<h3 class="text-2xl font-semibold">{title}</h3>
+		class="flex flex-col h-full p-4 flex-wrap text-gray-700 rounded-lg shadow-xl bg-gray-200 dark:bg-gray-800 dark:text-gray-300 hover:bg-[#f5f6f7] dark:hover:bg-gray-700 hover:-translate-y-1 duration-300">
+		<img class="object-fill h-48 w-full rounded-full" />
+		<h3 class="text-2xl text-center font-semibold p-2">{title}</h3>
+		<p class="p-2">{description}</p>
+		<p class="p-2">{langs}</p>
 	</div>
 </a>

@@ -11,7 +11,13 @@ const allProjects = await Astro.glob("./projects/*.md*");
 		<!-- Cards -->
 		{
 			allProjects.map((project) => (
-				<ProjectCard url={project.url} title={project.frontmatter.name} />
+				<ProjectCard
+					url={project.url}
+					title={project.frontmatter.name}
+					image={project.frontmatter.image}
+					description={project.frontmatter.description}
+					langs={project.frontmatter.langs}
+				/>
 			))
 		}
 	</div>

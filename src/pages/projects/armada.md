@@ -7,8 +7,9 @@ image:
     url: 'https://astro.build/assets/blog/astro-1-release-update/cover.jpeg' 
     alt: 'The Astro logo with the word One.'
 langs: ["Javascript", "HTML/CSS", "Game"]
+live: true
 ---
-# My First Blog Post
+## My First Blog Post
 
 Published on: 2022-07-01
 

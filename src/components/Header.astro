@@ -30,7 +30,6 @@ const NavLinks = [
 			aria-label="Home"
 			class="text-2xl tracking-wide font-extrabold text-gray-900 dark:text-white py-2 pr-2 transition-transform ease-in-out hover:-translate-y-1 duration-300">
 			<h1>Isaac <span class="text-orange-600">Pollack</span></h1>
-			<!-- TODO: Swap eachothers colors on hover -->
 		</a>
 
 		<nav class="hidden md:block space-x-3">
@@ -60,7 +59,7 @@ const NavLinks = [
 	<!-- Mobile Navbar -->
 	<div class="hidden mobile-menu">
 		<div
-			class="flex flex-col justify-center items-center gap-12 w-screen h-screen px-8 py-20 bg-slate-100 dark:bg-slate-900 border-b border-b-slate-700 md:hidden">
+			class="flex flex-col w-full h-full justify-center items-center gap-12 w-screen h-screen px-8 py-20 bg-slate-100 dark:bg-slate-900 border-b border-b-slate-700 md:hidden">
 			<nav class="flex flex-col gap-4 z-50">
 				{NavLinks.map((link) => <NavLink {...link} />)}
 			</nav>
