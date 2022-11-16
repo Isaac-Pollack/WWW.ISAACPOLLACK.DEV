@@ -2,12 +2,24 @@
 const { title, url, description, image, langs } = Astro.props;
 ---
 
-<a href={url} aria-label={`link to ${title}`}>
+<a href={url} aria-label={`link to ${title} project`}>
 	<div
-		class="flex flex-col h-full p-4 flex-wrap text-gray-700 rounded-lg shadow-xl bg-gray-200 dark:bg-gray-800 dark:text-gray-300 hover:bg-[#f5f6f7] dark:hover:bg-gray-700 hover:-translate-y-1 duration-300">
-		<img class="object-fill h-48 w-full rounded-full" />
+		class="border border-slate-400 dark:border-slate-700 flex flex-col h-full p-4 text-gray-700 dark:text-gray-300 bg-gray-200 dark:bg-gray-800 rounded-lg shadow-xl hover:opacity-75 dark:hover:opacity-75 hover:-translate-y-2 duration-300">
+		<img
+			src={image.url}
+			class="object-fill h-3/4 w-full rounded"
+			alt={image.alt}
+		/>
 		<h3 class="text-2xl text-center font-semibold p-2">{title}</h3>
-		<p class="p-2">{description}</p>
-		<p class="p-2">{langs}</p>
+		<p class="p-2 mb-2">{description}</p>
+		<div class="text-center justify-content-center flex-nowrap">
+			{
+				langs.map((languages) => (
+					<p class="m-1 inline-block bg-gray-300 dark:bg-slate-700 rounded-full p-2">
+						{languages}
+					</p>
+				))
+			}
+		</div>
 	</div>
 </a>

@@ -1,0 +1,32 @@
+@font-face {
+  font-family: "SoehneMono";
+  src: url('/fonts/soehne-mono-web-buch.woff');
+}
+
+@font-face {
+  font-family: "UntitledSans";
+  src: url('/fonts/UntitledSansWeb-Regular.woff');
+}
+
+html {
+  font-family: system-ui, sans-serif;
+  --slider-bg: #dddddd;
+  --slider-bg-before: #fff;
+  --slider-input-bg: #8758ff;
+}
+code {
+  font-family: Menlo, Monaco, Lucida Console, Liberation Mono,
+    DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
+}
+
+#styled-svg:hover button svg {
+  stroke: white;
+}
+
+.exit:hover svg {
+  stroke: white;
+}
+
+.accordion-content {
+  transition: max-height 0.3s ease-out, padding 0.3s ease;
+}

@@ -1,12 +1,48 @@
 ---
 import Master from "./Master.astro";
+
+//TODO Type checking: https://docs.astro.build/en/guides/markdown-content/#markdown-layout-props
+
 const { frontmatter } = Astro.props;
+const live_visible = frontmatter.code.show_live;
+const source_visible = frontmatter.code.show_source;
 ---
 
 <Master title={frontmatter.title} description={frontmatter.description}>
-	<div class="flex items-center justify-center h-[80vh]">
-		<article>
+	<div class="flex justify-center flex-col m-4">
+		<div class="mb-6 items-center">
+			<h1 class="text-4xl font-bold tracking-wide font-soehne">
+				{frontmatter.name}
+			</h1>
+		</div>
+		<article class="mb-4">
 			<slot />
+			<div class="m-4">
+				{
+					live_visible && (
+						<a href={frontmatter.code.live}>
+							<button class="shadow-md text-white bg-[#24292F] hover:bg-[#3A424C] font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center m-2">
+								Live
+							</button>
+						</a>
+					)
+				}
+				{
+					source_visible && (
+						<a href={frontmatter.code.source}>
+							<button class="shadow-md text-white bg-[#24292F] hover:bg-[#3A424C] font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center m-2">
+								Source Code
+							</button>
+						</a>
+					)
+				}
+			</div>
 		</article>
 	</div>
 </Master>
+
+<style>
+	article {
+		color: red;
+	}
+</style>

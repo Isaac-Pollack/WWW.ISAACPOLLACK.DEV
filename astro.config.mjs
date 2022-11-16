@@ -10,4 +10,7 @@ import tailwind from "@astrojs/tailwind";
 export default defineConfig({
   integrations: [mdx(), tailwind()],
   site: 'https://www.isaacpollack.dev/',
+  markdown: {
+    syntaxHighlight: 'prism',
+  },
 });

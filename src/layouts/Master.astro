@@ -1,6 +1,7 @@
 ---
 import Header from "@components/Header.astro";
 import Footer from "@components/Footer.astro";
+import "../styles/master.css";
 export interface Props {
 	title?: string;
 	description?: string;
@@ -15,7 +16,7 @@ const canonicalURL = new URL(Astro.url).href;
 		<!-- Core -->
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="viewport" content="width=device-width" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<link rel="icon" type="image/svg+xml" href="favicon.svg" />
 		<meta name="description" content="Isaac Pollack Portfolio" />
 		<meta
@@ -78,30 +79,5 @@ const canonicalURL = new URL(Astro.url).href;
 
 		<!-- Footer -->
 		<Footer />
-
-		<style is:global>
-			html {
-				font-family: system-ui, sans-serif;
-				--slider-bg: #dddddd;
-				--slider-bg-before: #fff;
-				--slider-input-bg: #8758ff;
-			}
-			code {
-				font-family: Menlo, Monaco, Lucida Console, Liberation Mono,
-					DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
-			}
-
-			#styled-svg:hover button svg {
-				stroke: white;
-			}
-
-			.exit:hover svg {
-				stroke: white;
-			}
-
-			.accordion-content {
-				transition: max-height 0.3s ease-out, padding 0.3s ease;
-			}
-		</style>
 	</body>
 </html>

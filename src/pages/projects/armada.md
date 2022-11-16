@@ -4,10 +4,14 @@ title: 'Isaac Pollack - Armada'
 name: Armada
 description: 'This is the first post of my new Astro blog.'
 image:
-    url: 'https://astro.build/assets/blog/astro-1-release-update/cover.jpeg' 
-    alt: 'The Astro logo with the word One.'
+    url: 'armada.png'
+    alt: 'Armada Thumbnail'
 langs: ["Javascript", "HTML/CSS", "Game"]
-live: true
+code:
+    show_live: false
+    show_source: true
+    live: '/'
+    source: 'https://EXAMPLE.LINK'
 ---
 ## My First Blog Post
 
