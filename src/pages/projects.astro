@@ -19,7 +19,8 @@ const draftPosts = allProjects.filter((project) => project.frontmatter.draft);
 				<ProjectCard
 					url={project.url}
 					title={project.frontmatter.name}
-					image={project.frontmatter.image}
+					imageUrl={project.frontmatter.image.url}
+					imageAlt={project.frontmatter.image.alt}
 					description={project.frontmatter.description}
 					langs={project.frontmatter.langs}
 					live={project.frontmatter.live}
@@ -33,7 +34,8 @@ const draftPosts = allProjects.filter((project) => project.frontmatter.draft);
 				<ProjectCard
 					url={project.url}
 					title={project.frontmatter.name}
-					image={project.frontmatter.image}
+					imageUrl={project.frontmatter.image.url}
+					imageAlt={project.frontmatter.image.alt}
 					description={project.frontmatter.description}
 					langs={project.frontmatter.langs}
 					live={project.frontmatter.live}
