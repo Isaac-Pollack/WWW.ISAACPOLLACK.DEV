@@ -4,7 +4,7 @@ title: Isaac Pollack - Nangular Chat
 name: Nangular Chat
 description: "I had some challenges, but asking in the community really helped!"
 image: 
-    url: "nang-chat.png"
+    url: "/nang-chat.png"
     alt: "Nangular Chat Thumbnail"
 langs: ["Javascript", "HTML/CSS", "Game"]
 code:
