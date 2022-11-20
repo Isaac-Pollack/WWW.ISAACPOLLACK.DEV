@@ -17,8 +17,8 @@ import UseCategory from "@components/UseCategory.astro";
 		<div
 			class="w-9/12 mx-auto rounded border border-slate-500 dark:border-white">
 			<div class="px-10 pt-10 shadow-sm text-black dark:text-white">
-				<h1 class="font-semibold text-2xl">Uses</h1>
-				<p class="text-slate-600 dark:text-slate-400">
+				<h1 class="font-semibold text-2xl font-soehne">Uses</h1>
+				<p class="text-slate-600 dark:text-slate-400 font-untitled">
 					Inspired by <a
 						href="https://uses.tech/"
 						target="_blank"
@@ -43,7 +43,7 @@ import UseCategory from "@components/UseCategory.astro";
 							<div class="py-2 inline-block min-w-full sm:px-6 lg:px-8">
 								<div class="overflow-x-auto">
 									<table
-										class="min-w-full text-gray-900 dark:text-white whitespace-nowrap text-sm font-medium">
+										class="min-w-full text-gray-900 dark:text-white whitespace-nowrap text-sm font-medium font-untitled">
 										<tbody>
 											<tr class="border-b">
 												<td class="px-6 py-4">Laptop</td>
@@ -103,7 +103,7 @@ import UseCategory from "@components/UseCategory.astro";
 					<h3 class="mb-2">
 						<strong>Editors:</strong>
 					</h3>
-					<ul class="list-disc m-2">
+					<ul class="list-disc m-2 font-untitled">
 						<li class="ml-8">
 							VSCode with the <a
 								href="https://marketplace.visualstudio.com/items?itemName=Hermitter.oh-lucy-vscode"
@@ -171,36 +171,38 @@ import UseCategory from "@components/UseCategory.astro";
 				</UseCategory>
 
 				<UseCategory emoji="💻" title="Mac">
-					<p class="mb-2">
-						<strong>Package Manager:</strong>
-						<a
-							href="https://brew.sh/"
-							class="font-medium text-blue-600 dark:text-blue-500 no-underline hover:underline dark:hover:decoration-white hover:decoration-gray-800 underline-offset-2x">
-							Homebrew
-						</a>
-					</p>
-					<p class="mb-2">
-						<strong>API:</strong>
-						<a
-							href="https://insomnia.rest/"
-							class="font-medium text-blue-600 dark:text-blue-500 no-underline hover:underline dark:hover:decoration-white hover:decoration-gray-800 underline-offset-2x">
-							Insomnia
-						</a>
-					</p>
-					<p class="mb-2">
-						<strong>Documentation:</strong>
-						<a
-							href="https://kapeli.com/dash"
-							class="font-medium text-blue-600 dark:text-blue-500 no-underline hover:underline dark:hover:decoration-white hover:decoration-gray-800 underline-offset-2x">
-							Dash
-						</a>
-					</p>
+					<div class="font-untitled">
+						<p class="mb-2">
+							<strong>Package Manager:</strong>
+							<a
+								href="https://brew.sh/"
+								class="font-medium text-blue-600 dark:text-blue-500 no-underline hover:underline dark:hover:decoration-white hover:decoration-gray-800 underline-offset-2x">
+								Homebrew
+							</a>
+						</p>
+						<p class="mb-2">
+							<strong>API:</strong>
+							<a
+								href="https://insomnia.rest/"
+								class="font-medium text-blue-600 dark:text-blue-500 no-underline hover:underline dark:hover:decoration-white hover:decoration-gray-800 underline-offset-2x">
+								Insomnia
+							</a>
+						</p>
+						<p class="mb-2">
+							<strong>Documentation:</strong>
+							<a
+								href="https://kapeli.com/dash"
+								class="font-medium text-blue-600 dark:text-blue-500 no-underline hover:underline dark:hover:decoration-white hover:decoration-gray-800 underline-offset-2x">
+								Dash
+							</a>
+						</p>
+					</div>
 				</UseCategory>
 
 				<!-- Divider -->
 				<div class="h-1 w-full mx-auto border-b my-5 dark:border-slate-400">
 				</div>
-				<p class="text-center text-slate-600 dark:text-slate-400 pb-6">
+				<p class="text-center text-slate-600 dark:text-slate-400 pb-6 font-soehne">
 					Updated: 05/11/2022
 				</p>
 			</div>

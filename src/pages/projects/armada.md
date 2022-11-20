@@ -4,7 +4,7 @@ title: 'Isaac Pollack - Armada'
 name: Armada
 description: 'This is the first post of my new Astro blog.'
 image:
-    url: '/armada.png'
+    url: '/project_images/armada.png'
     alt: 'Armada Thumbnail'
 langs: ["Javascript", "HTML/CSS", "Game"]
 code:

@@ -15,13 +15,17 @@ const source_visible = frontmatter.code.show_source;
 				{frontmatter.name}
 			</h1>
 		</div>
-		<article class="mb-4">
+		<article class="mb-4 font-untitled">
 			<slot />
 			<div class="m-4">
 				{
 					live_visible && (
-						<a href={frontmatter.code.live}>
-							<button class="shadow-md text-white bg-[#24292F] hover:bg-[#3A424C] font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center m-2">
+						<a
+							href={frontmatter.code.live}
+							target="_blank"
+							rel="noopener noreferrer"
+							aria-label={`link to ${frontmatter.name} live preview`}>
+							<button class="shadow-md text-white bg-[#24292F] hover:bg-[#3A424C] font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center m-2 font-soehne">
 								Live
 							</button>
 						</a>
@@ -29,8 +33,12 @@ const source_visible = frontmatter.code.show_source;
 				}
 				{
 					source_visible && (
-						<a href={frontmatter.code.source}>
-							<button class="shadow-md text-white bg-[#24292F] hover:bg-[#3A424C] font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center m-2">
+						<a
+							href={frontmatter.code.source}
+							target="_blank"
+							rel="noopener noreferrer"
+							aria-label={`link to ${frontmatter.name} source code`}>
+							<button class="shadow-md text-white bg-[#24292F] hover:bg-[#3A424C] font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center m-2 font-soehne">
 								Source Code
 							</button>
 						</a>
@@ -40,9 +48,3 @@ const source_visible = frontmatter.code.show_source;
 		</article>
 	</div>
 </Master>
-
-<style>
-	article {
-		color: red;
-	}
-</style>

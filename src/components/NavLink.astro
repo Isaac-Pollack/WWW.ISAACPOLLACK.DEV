@@ -14,10 +14,9 @@ const isCurrent = Astro.url.pathname.endsWith(href);
 	aria-label={`link to ${name}`}
 	rel="noopener noreferrer"
 	class:list={[
-		"px-2 py-1 font-medium text-lg hover:underline dark:hover:underline text-center font-untitled",
+		"px-2 py-1 font-medium text-lg hover:underline dark:hover:underline text-center font-soehne",
 		isCurrent
 			? "text-blue-800 dark:text-blue-200"
 			: "text-slate-400 dark:text-slate-400",
-	]}
-	>{name}
-</a>
+	]}>{name}</a
+>
