@@ -14,9 +14,16 @@ const source_visible = frontmatter.code.show_source;
 			<h1 class="text-4xl font-bold tracking-wide font-soehne">
 				{frontmatter.name}
 			</h1>
+			<img
+				src={frontmatter.image.url}
+				class="object-fill h-3/4 w-full rounded border border-slate-400 dark:border-slate-700"
+				alt={frontmatter.image.alt}
+			/>
 		</div>
 		<article class="mb-4 font-untitled">
 			<slot />
+			<h2>Gallery</h2>
+			<p>{frontmatter.gallery}</p>
 			<div class="m-4">
 				{
 					live_visible && (
