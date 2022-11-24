@@ -31,18 +31,19 @@ const draftPosts = allProjects.filter((project) => project.frontmatter.draft);
 		}
 		<!-- TODO: REMOVE BEFORE BUILD -->
 		{
-			draftPosts.map((project) => (
-				<ProjectCard
-					url={project.url}
-					title={project.frontmatter.name}
-					imageUrl={project.frontmatter.image.url}
-					imageAlt={project.frontmatter.image.alt}
-					description={project.frontmatter.description}
-					langs={project.frontmatter.langs}
-					live={project.frontmatter.live}
-					source={project.frontmatter.source}
-				/>
-			))
+			Astro.url.origin === "http://localhost:3000" &&
+				draftPosts.map((project) => (
+					<ProjectCard
+						url={project.url}
+						title={project.frontmatter.name}
+						imageUrl={project.frontmatter.image.url}
+						imageAlt={project.frontmatter.image.alt}
+						description={project.frontmatter.description}
+						langs={project.frontmatter.langs}
+						live={project.frontmatter.live}
+						source={project.frontmatter.source}
+					/>
+				))
 		}
 	</div>
 </Master>

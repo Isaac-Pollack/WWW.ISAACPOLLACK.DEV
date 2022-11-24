@@ -1,6 +1,8 @@
 {
   "extends": "astro/tsconfigs/base",
   "compilerOptions": {
+    "esModuleInterop": true,
+    "moduleResolution": "Node",
     "baseUrl": ".",
     "paths": {
       "@components/*": [
