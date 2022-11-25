@@ -7,7 +7,7 @@ description: 'A template for rapidly creating project pages in markdown!'
 image:
     url: 'https://i.stack.imgur.com/SBv4T.gif'
     alt: 'Template Thumbnail'
-    gallery: 'template' # All images in this folder will be displayed within the projects Gallery
+    gallery: '/template/' # All images in this folder will be displayed within the projects Gallery
 langs: ["Typescript", "Javascript", "HTML/CSS", "MySql", "Laravel", "PHP", "Python"] # What appears on the projects 'card'
 code:
     show_live: true # Whether to show the live button

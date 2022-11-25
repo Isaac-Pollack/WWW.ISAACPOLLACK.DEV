@@ -7,7 +7,7 @@ description: 'A P5.JS and P5.Play game created for a university assessment.'
 image:
     url: '/project_images/armada.png'
     alt: 'Armada Thumbnail'
-    gallery: 'armada' # All images in this folder will be displayed within the projects Gallery
+    gallery: '/armada/' # All images in this folder will be displayed within the projects Gallery
 langs: ["Typescript", "Javascript", "HTML/CSS", "MySql", "Laravel", "PHP", "Python"] # What appears on the projects 'card'
 code:
     show_live: false

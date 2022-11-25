@@ -9,7 +9,7 @@ const live_visible = frontmatter.code.show_live;
 const source_visible = frontmatter.code.show_source;
 
 var glob;
-try { glob = await Astro.glob("../../public/project_images/*.png") }
+try { glob = await Astro.glob("../../public/project_images/*/*.png") }
 catch(error) {}
 
 const images = glob
@@ -17,6 +17,7 @@ const images = glob
       .map((img) => img.default.replace("/public", ""))
       .filter((img) => img.includes(frontmatter.image.gallery))
     : []
+console.log(images)
 ---
 
 <Master title={frontmatter.title} description={frontmatter.description}>
