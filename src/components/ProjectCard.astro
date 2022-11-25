@@ -7,7 +7,7 @@ const { title, url, description, imageUrl, imageAlt, langs } = Astro.props;
 		class="border border-slate-400 dark:border-slate-700 flex flex-col h-full p-4 text-gray-700 dark:text-gray-300 bg-gray-200 dark:bg-gray-800 rounded-lg shadow-xl hover:opacity-75 dark:hover:opacity-75 hover:-translate-y-2 duration-300">
 		<img
 			src={imageUrl}
-			class="object-fill h-3/4 w-full rounded"
+			class="object-fill max-w-full h-3/4 w-full rounded"
 			alt={imageAlt}
 		/>
 		<h3 class="text-2xl text-center font-semibold p-2 font-soehne">{title}</h3>

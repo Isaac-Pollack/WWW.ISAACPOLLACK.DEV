@@ -1,26 +1,25 @@
 ---
 draft: true
 layout: ../../layouts/ProjectLayout.astro
-title: 'Isaac Pollack - Template Project'
-name: Template
+title: 'Isaac Pollack - Template Project' # The browser tab title
+name: Template # What appears in the Project page
 description: 'A template for rapidly creating project pages in markdown!'
 image:
     url: 'https://i.stack.imgur.com/SBv4T.gif'
     alt: 'Template Thumbnail'
-    gallery: 'template/' #Image Gallery
-langs: ["Typescript", "Javascript", "HTML/CSS", "MySql", "Laravel", "PHP", "Python"]
+    gallery: 'template' # All images in this folder will be displayed within the projects Gallery
+langs: ["Typescript", "Javascript", "HTML/CSS", "MySql", "Laravel", "PHP", "Python"] # What appears on the projects 'card'
 code:
-    show_live: true
-    show_source: true
+    show_live: true # Whether to show the live button
     live: 'https://github.com/Isaac-Pollack'
+    show_source: true # Whether to show the source button
     source: 'https://github.com/Isaac-Pollack'
 ---
 
 ## TODO When creating new pages
 
 - update the frontmatter to `draft: false`
-- alter the image fields
-- update the langs array
+- alter all relevant fields
 
 ## What is this project?
 
@@ -31,7 +30,12 @@ This description will serve to introduce more details about the project, how it 
 INCLUDE TAGS
 
 - Typescript
-- Express.js
+- Javascript
+- HTML/CSS
+- MySql
+- Laravel
+- PHP
+- Python
 
 ## Goals
 
