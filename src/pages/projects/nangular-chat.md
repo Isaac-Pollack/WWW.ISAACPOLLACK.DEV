@@ -6,7 +6,7 @@ description: "I had some challenges, but asking in the community really helped!"
 image: 
     url: "/project_images/nang-chat.png"
     alt: "Nangular Chat Thumbnail"
-    gallery: 'nang-chat'
+    gallery: '/nangular/'
 langs: ["Javascript", "HTML/CSS", "Game"]
 code:
     live: '/'

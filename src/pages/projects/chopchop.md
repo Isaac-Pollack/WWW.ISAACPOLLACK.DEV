@@ -6,7 +6,7 @@ description: 'This is the first post of my new Astro blog.'
 image:
     url: '/project_images/chop-chop.png' 
     alt: 'Chop Chop Thumbnail'
-    gallery: 'chop-chop'
+    gallery: '/chopchop/'
 langs: ["Javascript", "HTML/CSS", "Game"]
 code:
     live: '/'
