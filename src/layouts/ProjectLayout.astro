@@ -8,11 +8,14 @@ const { frontmatter } = Astro.props;
 const live_visible = frontmatter.code.show_live;
 const source_visible = frontmatter.code.show_source;
 
-const bigGlob = await Astro.glob("../../public/project_images/*/*.png");
-const images = bigGlob
-	.map((img) => img.default.replace("/public", ""))
-	.filter((img) => img.includes(frontmatter.image.gallery));
-console.log(images);
+let images;
+try {
+  images = await Astro.glob("../../public/project_images/*/*.png")
+    .map((img) => img.default.replace("/public", ""))
+    .filter((img) => img.includes(frontmatter.image.gallery))
+} catch(error) {
+
+}
 ---
 
 <Master title={frontmatter.title} description={frontmatter.description}>
@@ -68,7 +71,7 @@ console.log(images);
       </div>
 
       {
-				images.length >= 1 &&
+				images &&
 				<div>
 					<!-- PROJECT GALLERY -->
 					<h2 class="text-2xl m-4 mt-8 text-center font-bold tracking-wide font-soehne">
