@@ -1,6 +1,5 @@
 ---
 import Master from "./Master.astro";
-import { faker } from "@faker-js/faker";
 
 //TODO Type checking: https://docs.astro.build/en/guides/markdown-content/#markdown-layout-props
 
@@ -9,7 +8,7 @@ const live_visible = frontmatter.code.show_live;
 const source_visible = frontmatter.code.show_source;
 
 var glob;
-try { glob = await Astro.glob("../../public/project_images/*/*.png") }
+try { glob = await Astro.glob("../../public/project_images/*/*.{png,jpeg,gif}") }
 catch(error) {}
 
 const images = glob
@@ -17,7 +16,7 @@ const images = glob
       .map((img) => img.default.replace("/public", ""))
       .filter((img) => img.includes(frontmatter.image.gallery))
     : []
-console.log(images)
+console.log('\n', images, '\n', '~ Loaded into', `${Astro.url}`, 'gallery.', '\n')
 ---
 
 <Master title={frontmatter.title} description={frontmatter.description}>
@@ -81,18 +80,19 @@ console.log(images)
 					</h2>
 
 					<!-- Divider -->
-					<div class="h-1 w-full mx-auto border-b my-5 dark:border-slate-400">
+					<div class="h-1 w-full border-b my-5 dark:border-slate-400 mb-11">
 					</div>
 
 					<div class="grid items-stretch gap-12 md:grid-cols-2 lg:grid-cols-3 mx-6 content-center place-items-center">
-						{ images.map((img) => (
-						  <img src={img} class="rounded-md transition duration-500 hover:scale-125" alt={img} />
-						))
+						{
+              images.map((img) => (
+                <img src={img} class="rounded-md transition duration-500 hover:scale-125" alt={img} />
+              ))
 						}
 					</div>
 
 					<!-- Divider -->
-					<div class="h-1 w-full mx-auto border-b my-5 dark:border-slate-400">
+					<div class="h-1 w-full mx-auto border-b my-5 dark:border-slate-400 mt-11">
 					</div>
 				</div>
       }
