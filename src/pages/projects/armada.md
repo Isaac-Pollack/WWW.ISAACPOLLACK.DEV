@@ -1,42 +1,42 @@
 ---
 draft: false
 layout: ../../layouts/ProjectLayout.astro
-title: 'Isaac Pollack - Armada'
-name: Armada
-description: 'A P5.JS and P5.Play game created for a university assessment.'
+title: 'Isaac Pollack - Armada Project' # The browser tab title
+name: Armada # What appears in the Project page
+description: 'Armada - my first ever project. It was complex, rewarding and a significant learning journey for me. An important milestone in my developer journey.'
 image:
     url: '/project_images/armada.png'
     alt: 'Armada Thumbnail'
     gallery: '/armada/' # All images in this folder will be displayed within the projects Gallery (requires both slashes so as not to pick up thumbnails)
-langs: ["Typescript", "Javascript", "HTML/CSS", "MySql", "Laravel", "PHP", "Python"] # What appears on the projects 'card'
+langs: ["Javascript", "P5.JS", "P5.Play"] # What appears on the projects 'card'
 code:
-    show_live: false
+    show_live: false # Whether to show the live button
     live: '/'
-    show_source: true
+    show_source: true # Whether to show the source button
     source: 'https://github.com/Isaac-Pollack/Armada'
 ---
 
-## What I've accomplished
-
-1. **Installing Astro**: First, I created a new Astro project and set up my online accounts.
-
-2. **Making Pages**: I then learned how to make pages by creating new `.astro` files and placing them in the `src/pages/` folder.
-
-3. **Making Blog Posts**: This is my first blog post! I now have Astro pages and Markdown posts!
-
 ## What is this project?
 
-This description will serve to introduce more details about the project, how it came about, whethered it's hosted live and where this was in my programming journey.
+Armada was the first programming I had ever touched/done and It was complex, rewarding and a significant learning journey for me. It was my first exposure and project and it was extremely freeform, being totally self motivated. The beginning of my interest in creating, problem solving and eternal learning and improvement.
 
 ## Tech
 
-- Typescript
-- Express.js
+INCLUDE TAGS
+
+- Javascript
+- P5.JS
+- P5.Play
 
 ## Goals
 
-My aim for this project was to take a simple application and take it to a more difficult level, while maintaining lots of good design choices.
+To learn the fundamentals of javascript, prior to extensive OOP implementation. This was my first ever programming, ever. I had never even touched HTML!
+
+- To learn in an interesting format (games).
+- Ignite a passion
 
 ## Takeaways
 
-These goals proved to be quite difficult without extensive initial planning. I under-estimated how difficult maintaining that balance would be.
+Programming is hard! It's hugely problem solving and extremely rewarding. This taught me that this is a skill I genuinely WANT to improve in, and the project I built had many flaws and potential for refactor. I include this in my portfolio as a tribute to the journey and desire to continue learning!
+
+My style for learning (hands on) was troublesome and a hurdle that I needed to overcome as good code requires planning, of which I initlally did none of. This project really struck the importance of that in me, and ignited my passion to develop!
