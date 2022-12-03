@@ -3,7 +3,7 @@ draft: true
 layout: ../../layouts/ProjectLayout.astro
 title: 'Isaac Pollack - Template Project' # The browser tab title
 name: Template # What appears in the Project page
-description: 'A template for rapidly creating project pages in markdown!'
+description: 'A template for rapidly creating project pages in markdown!' # Page meta
 image:
     url: 'https://i.stack.imgur.com/SBv4T.gif'
     alt: 'Template Thumbnail'
@@ -18,8 +18,9 @@ code:
 
 ## TODO When creating new pages
 
-- update the frontmatter to `draft: false`
-- alter all relevant fields
+- Completely update the Frontmatter above ▲
+- Completely update project information below ▼
+- Change to `draft: false`
 
 ## What is this project?
 
@@ -27,7 +28,7 @@ This description will serve to introduce more details about the project, how it 
 
 ## Tech
 
-INCLUDE TAGS
+INCLUDE FRONTMATTER TAGS
 
 - Typescript
 - Javascript

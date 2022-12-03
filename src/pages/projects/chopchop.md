@@ -22,8 +22,6 @@ Chop Chop was my first foray into Laravel. I had some experience with PHP at the
 
 ## Tech
 
-INCLUDE TAGS
-
 - Laravel
 - PHP
 - SQLite

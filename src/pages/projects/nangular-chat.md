@@ -24,8 +24,6 @@ More in depth documentation including that of the API, can be found by clicking 
 
 ## Tech
 
-INCLUDE TAGS
-
 - Node.JS
 - Express
 - Angular

@@ -22,8 +22,6 @@ Armada was the first programming I had ever touched/done and It was complex, rew
 
 ## Tech
 
-INCLUDE TAGS
-
 - Javascript
 - P5.JS
 - P5.Play

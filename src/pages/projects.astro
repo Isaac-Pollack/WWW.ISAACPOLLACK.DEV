@@ -29,7 +29,6 @@ const draftPosts = allProjects.filter((project) => project.frontmatter.draft);
 				/>
 			))
 		}
-		<!-- TODO: REMOVE BEFORE BUILD -->
 		{
 			Astro.url.origin === "http://localhost:3000" &&
 				draftPosts.map((project) => (
