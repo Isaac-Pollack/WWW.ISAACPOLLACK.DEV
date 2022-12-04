@@ -22,16 +22,17 @@ const NavLinks = [
 	class="sticky top-0 left-0 right-0 bg-slate-100 dark:bg-slate-900 bg-opacity-70 dark:bg-opacity-70 backdrop-blur z-10"
 	aria-label="Site Header">
 	<!-- Navbar -->
-	<div class="grid grid-cols-3 gap-12 justify-items-center items-center">
+	<div
+		class="grid grid-cols-3 sm:space-x-2 md:space-x-6 space-x-12 justify-items-center items-center">
 		<a
 			href="/"
 			rel="noopener noreferrer"
 			aria-label="Home"
-			class="text-2xl tracking-wide font-extrabold text-gray-900 dark:text-white py-2 transition-transform ease-in-out hover:-translate-y-1 duration-300 font-soehne">
+			class="ml-4 text-2xl tracking-wide font-extrabold text-gray-900 dark:text-white py-2 transition-transform ease-in-out hover:-translate-y-1 duration-300 font-soehne sm:ml-8">
 			<h1>Isaac</h1><span class="text-orange-600">Pollack</span>
 		</a>
 
-		<nav class="hidden md:block space-x-3 mr-4" role="navigation">
+		<nav class="hidden md:block" role="navigation">
 			{NavLinks.map((link) => <NavLink {...link} />)}
 		</nav>
 		<!-- Burger Menu -->
