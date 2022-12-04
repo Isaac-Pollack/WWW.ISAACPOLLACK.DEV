@@ -12,94 +12,105 @@ import UseCategory from "@components/UseCategory.astro";
 	/>
 
 	<!-- Uses Accordion -->
-	<div class="grid place-items-center flex flex-nowrap">
-		<div
-			class="w-9/12 mx-auto rounded border border-slate-500 dark:border-white">
-			<div class="px-10 pt-10 shadow-sm text-black dark:text-white">
-				<h1 class="font-semibold text-2xl font-soehne text-center">Uses</h1>
-				<p
-					class="text-slate-600 dark:text-slate-400 font-untitled text-center mt-2">
-					Inspired by <a
-						href="https://uses.tech/"
-						target="_blank"
-						class="font-medium text-blue-600 dark:text-blue-500 no-underline hover:underline dark:hover:decoration-white hover:decoration-gray-800 underline-offset-2"
-						>uses.tech</a
-					>
-					by <a
-						href="https://wesbos.com/"
-						target="_blank"
-						class="font-medium text-blue-600 dark:text-blue-500 no-underline hover:underline dark:hover:decoration-white hover:decoration-gray-800 underline-offset-2"
-						>Wes Bos</a
-					>. These are the tools I use!
-				</p>
+	<div class="rounded border border-slate-500 dark:border-white">
+		<div class="p-6 shadow-sm text-black dark:text-white">
+			<h1 class="font-semibold text-2xl font-soehne text-center">Uses</h1>
+			<p
+				class="text-slate-600 dark:text-slate-400 font-untitled text-center mt-2">
+				Inspired by <a
+					href="https://uses.tech/"
+					target="_blank"
+					class="font-medium text-blue-600 dark:text-blue-500 no-underline hover:underline dark:hover:decoration-white hover:decoration-gray-800 underline-offset-2"
+					>uses.tech</a
+				>
+				by <a
+					href="https://wesbos.com/"
+					target="_blank"
+					class="font-medium text-blue-600 dark:text-blue-500 no-underline hover:underline dark:hover:decoration-white hover:decoration-gray-800 underline-offset-2"
+					>Wes Bos</a
+				>. These are the tools I use!
+			</p>
 
-				<!-- Divider -->
-				<div class="h-1 w-full mx-auto border-b my-5 dark:border-slate-400">
-				</div>
+			<!-- Divider -->
+			<div class="h-1 w-full mx-auto my-5 dark:border-slate-400"></div>
 
-				<UseCategory emoji="🖱️" title="Hardware">
-					<div class="flex flex-col">
-						<div class="overflow-x-auto sm:-mx-6 lg:-mx-8">
-							<div class="py-2 inline-block min-w-full sm:px-6 lg:px-8">
-								<div class="overflow-x-auto">
-									<table
-										class="min-w-full text-gray-900 dark:text-white whitespace-nowrap text-sm font-medium font-untitled">
-										<tbody>
-											<tr class="border-b">
-												<td class="px-6 py-4">Laptop</td>
-												<td class="px-6 py-4"> Acer Aspire A515-43</td>
-											</tr>
-											<tr class="border-b">
-												<td class="px-6 py-4">CPU</td>
-												<td class="px-6 py-4"> Intel i7-8700K CPU @ 3.70GHz</td>
-											</tr>
-											<tr class="border-b">
-												<td class="px-6 py-4">GPU</td>
-												<td class="px-6 py-4"> NVIDIA GEFORCE GTX 1060 6GB</td>
-											</tr>
-											<tr class="border-b">
-												<td class="px-6 py-4">Motherboard</td>
-												<td class="px-6 py-4"> ASUS ROG STRIX Z370-E GAMING</td>
-											</tr>
-											<tr class="border-b">
-												<td class="px-6 py-4">Memory</td>
-												<td class="px-6 py-4">
-													Corsair Vengeance LPX 32GB DDR4
-												</td>
-											</tr>
-											<tr class="border-b">
-												<td class="px-6 py-4">Monitors</td>
-												<td class="px-6 py-4">
-													MSI Optix MAG274QRF QHD 165Hz G-Sync HDR IPS 27"
-												</td>
-											</tr>
-											<tr class="border-b">
-												<td class="px-6 py-4">Keyboard</td>
-												<td class="px-6 py-4">
-													Keychron K5 SE Wireless - Low Profile Gateron Brown
-												</td>
-											</tr>
-											<tr class="border-b">
-												<td class="px-6 py-4">Mouse</td>
-												<td class="px-6 py-4"> Razer Deathadder</td>
-											</tr>
-											<tr class="border-b">
-												<td class="px-6 py-4">Headset</td>
-												<td class="px-6 py-4"> Steelseries Arctic 3</td>
-											</tr>
-											<tr class="border-b">
-												<td class="px-6 py-4">Webcam</td>
-												<td class="px-6 py-4"> Razer Kiyo</td>
-											</tr>
-										</tbody>
-									</table>
-								</div>
-							</div>
+			<UseCategory emoji="🖱️" title="Hardware">
+				<div class="flex flex-col">
+					<div class="overflow-x-auto sm:-mx-6 lg:-mx-8">
+						<div class="py-2 inline-block min-w-full sm:px-6 lg:px-8">
+							<table
+								class="min-w-full text-gray-900 dark:text-white whitespace-nowrap text-sm font-medium font-untitled">
+								<tbody>
+									<tr class="bb bt">
+										<td
+											class="pl-4 py-4 font-semibold sm:block md:table-cell lg:table-cell"
+											>Laptop:</td
+										>
+										<td class="pl-4 py-4 sm:block md:table-cell lg:table-cell">
+											Acer Aspire A515-43</td
+										>
+									</tr>
+									<tr class="bb">
+										<td class="pl-4 py-4 font-semibold">CPU:</td>
+										<td class="pl-4 py-4 whitespace-normal">
+											Intel i7-8700K CPU @ 3.70GHz</td
+										>
+									</tr>
+									<tr class="bb">
+										<td class="pl-4 py-4 font-semibold">GPU:</td>
+										<td class="pl-4 py-4 whitespace-normal">
+											NVIDIA GEFORCE GTX 1060 6GB</td
+										>
+									</tr>
+									<tr class="bb">
+										<td class="pl-4 py-4 font-semibold">Motherboard:</td>
+										<td class="pl-4 py-4 whitespace-normal">
+											ASUS ROG STRIX Z370-E GAMING</td
+										>
+									</tr>
+									<tr class="bb">
+										<td class="pl-4 py-4 font-semibold">Memory:</td>
+										<td class="pl-4 py-4 whitespace-normal">
+											Corsair Vengeance LPX 32GB DDR4</td
+										>
+									</tr>
+									<tr class="bb">
+										<td class="pl-4 py-4 font-semibold">Monitors:</td>
+										<td class="pl-4 py-4 whitespace-normal">
+											MSI Optix MAG274QRF QHD 165Hz G-Sync HDR IPS 27"
+										</td>
+									</tr>
+									<tr class="bb">
+										<td class="pl-4 py-4 font-semibold">Keyboard:</td>
+										<td class="pl-4 py-4 whitespace-normal">
+											Keychron K5 SE Wireless - Low Profile Gateron Brown
+										</td>
+									</tr>
+									<tr class="bb">
+										<td class="pl-4 py-4 font-semibold">Mouse:</td>
+										<td class="pl-4 py-4 whitespace-normal">
+											Razer Deathadder</td
+										>
+									</tr>
+									<tr class="bb">
+										<td class="pl-4 py-4 font-semibold">Headset:</td>
+										<td class="pl-4 py-4 whitespace-normal">
+											Steelseries Arctic 3</td
+										>
+									</tr>
+									<tr>
+										<td class="pl-4 pt-4 font-semibold">Webcam:</td>
+										<td class="pl-4 pt-4"> Razer Kiyo</td>
+									</tr>
+								</tbody>
+							</table>
 						</div>
 					</div>
-				</UseCategory>
+				</div>
+			</UseCategory>
 
-				<UseCategory emoji="🍦" title="Software">
+			<UseCategory emoji="🍦" title="Software">
+				<div class="ml-4">
 					<h3 class="mb-2">
 						<strong>Editors:</strong>
 					</h3>
@@ -168,9 +179,11 @@ import UseCategory from "@components/UseCategory.astro";
 							Discord
 						</a>
 					</p>
-				</UseCategory>
+				</div>
+			</UseCategory>
 
-				<UseCategory emoji="💻" title="Mac">
+			<UseCategory emoji="💻" title="Mac">
+				<div class="ml-4">
 					<div class="font-untitled">
 						<p class="mb-2">
 							<strong>Package Manager:</strong>
@@ -197,16 +210,15 @@ import UseCategory from "@components/UseCategory.astro";
 							</a>
 						</p>
 					</div>
-				</UseCategory>
-
-				<!-- Divider -->
-				<div class="h-1 w-full mx-auto border-b my-5 dark:border-slate-400">
 				</div>
-				<p
-					class="text-center text-slate-600 dark:text-slate-400 pb-6 font-soehne">
-					Updated: 05/11/2022
-				</p>
-			</div>
+			</UseCategory>
+
+			<!-- Divider -->
+			<div class="h-1 w-full mx-auto bb my-5 dark:border-slate-400"></div>
+			<p
+				class="text-center text-slate-600 dark:text-slate-400 pb-6 font-soehne">
+				Updated: 05/11/2022
+			</p>
 		</div>
 
 		<script>

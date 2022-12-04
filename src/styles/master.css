@@ -30,3 +30,17 @@ code {
 .accordion-content {
   transition: max-height 0.3s ease-out, padding 0.3s ease;
 }
+
+.bb {
+  border-bottom: 1px solid;
+}
+
+.bt {
+  border-top: 1px solid;
+}
+
+@media (max-width: 639px) {
+  td {
+    display:block;
+  }
+}
