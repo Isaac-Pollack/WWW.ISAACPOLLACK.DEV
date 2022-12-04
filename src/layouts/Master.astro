@@ -44,23 +44,30 @@ const canonicalURL = new URL(Astro.url).href;
 		<meta property="og:description" content={description} />
 		<meta
 			property="og:image"
-			content="https://isaacpollack.dev/opg_banner.png"
+			content="https://www.isaacpollack.dev/opg_banner.png"
 		/>
+		<meta
+			property="og:image:secure_url"
+			content="https://www.isaacpollack.dev/opg_banner.png"
+		/>
+		<meta property="og:image:type" content="image/png" />
+		<meta property="og:image:width" content="1200" />
+		<meta property="og:image:height" content="630" />
 		<meta property="og:image:alt" content="Isaac Pollack Portfolio" />
 		<meta property="og:site_name" content="Isaac Pollack Portfolio" />
 		<meta property="og:locale" content="en_AU" />
 
 		<!-- Twitter -->
-		<meta
-			property="twitter:card"
-			content="https://isaacpollack.dev/twitter_banner.png"
-		/>
+		<meta property="twitter:card" content="summary_large_image" />
 		<meta property="twitter:url" content={canonicalURL} />
 		<meta name="twitter:site" content="@Isaac_Pollack" />
 		<meta name="twitter:creator" content="@Isaac_Pollack" />
 		<meta property="twitter:title" content={title} />
 		<meta property="twitter:description" content={description} />
-		<meta property="twitter:image" content="ogimage.png" />
+		<meta
+			property="twitter:image"
+			content="https://www.isaacpollack.dev/twitter_banner.png"
+		/>
 
 		<!-- Astro + Sitemap -->
 		<title>{title}</title>
