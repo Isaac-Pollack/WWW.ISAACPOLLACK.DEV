@@ -5,15 +5,12 @@ const { frontmatter } = Astro.props;
 const live_visible = frontmatter.code.show_live;
 const source_visible = frontmatter.code.show_source;
 
-var glob;
-try { glob = await Astro.glob("../../public/project_images/*/*.{png,jpeg,gif}") }
-catch(error) {}
+const glob: Record<string, () => Promise<unknown>> = import.meta.glob("/public/project_images/*/*.{png,jpeg,gif}");
 
-const images = glob
-    ? glob
-      .map((img) => img.default.replace("/public", ""))
+const images = Object.keys(glob)
+      .map((img) => img.replace("/public", ""))
       .filter((img) => img.includes(frontmatter.image.gallery))
-    : []
+
 console.log('\n', images, '\n', '~ Loaded into', `${Astro.url}`, 'gallery.', '\n')
 ---
 
@@ -69,8 +66,7 @@ console.log('\n', images, '\n', '~ Loaded into', `${Astro.url}`, 'gallery.', '\n
         <slot />
       </div>
 
-      {
-				images.length > 0 &&
+      { images.length > 0 &&
 				<div>
 					<!-- PROJECT GALLERY -->
 					<h2 class="text-2xl m-4 mt-8 text-center font-bold tracking-wide font-soehne">
