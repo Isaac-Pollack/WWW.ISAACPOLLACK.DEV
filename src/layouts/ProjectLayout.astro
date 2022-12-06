@@ -5,7 +5,7 @@ const { frontmatter } = Astro.props;
 const live_visible = frontmatter.code.show_live;
 const source_visible = frontmatter.code.show_source;
 
-const glob: Record<string, () => Promise<unknown>> = import.meta.glob("/public/project_images/*/*.{png,jpeg,gif}") || {};
+const glob: Record<string, () => Promise<unknown>> = import.meta.glob("/public/project_images/*/*.{png,jpeg,gif}");
 
 const images = Object.keys(glob)
       .map((img) => img.replace("/public", ""))
