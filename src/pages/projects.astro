@@ -1,0 +1,48 @@
+---
+import ProjectCard from "@components/ProjectCard.astro";
+import Master from "@layouts/Master.astro";
+
+const allProjects = await Astro.glob("./projects/*.md*");
+const nonDraftPosts = allProjects.filter(
+	(project) => !project.frontmatter.draft
+);
+const draftPosts = allProjects.filter((project) => project.frontmatter.draft);
+---
+
+<Master
+	title="Isaac Pollack - Projects"
+	description="My chosen works on display in my portfolio, my proudest achievements and my biggest lessons.">
+	<p class="p-3 text-center">Click any project for more info!</p>
+	<div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3 mx-6 items-stretch">
+		<!-- Cards -->
+		{
+			nonDraftPosts.map((project) => (
+				<ProjectCard
+					url={project.url}
+					title={project.frontmatter.name}
+					imageUrl={project.frontmatter.image.url}
+					imageAlt={project.frontmatter.image.alt}
+					description={project.frontmatter.description}
+					langs={project.frontmatter.langs}
+					live={project.frontmatter.live}
+					source={project.frontmatter.source}
+				/>
+			))
+		}
+		{
+			Astro.url.origin === "http://localhost:3000" &&
+				draftPosts.map((project) => (
+					<ProjectCard
+						url={project.url}
+						title={project.frontmatter.name}
+						imageUrl={project.frontmatter.image.url}
+						imageAlt={project.frontmatter.image.alt}
+						description={project.frontmatter.description}
+						langs={project.frontmatter.langs}
+						live={project.frontmatter.live}
+						source={project.frontmatter.source}
+					/>
+				))
+		}
+	</div>
+</Master>

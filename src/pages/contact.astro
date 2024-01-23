@@ -1,0 +1,90 @@
+---
+import Master from "@layouts/Master.astro";
+---
+
+<Master
+	title="Isaac Pollack - Contact"
+	description="Contact me via a number of methods, get in touch!">
+	<div class="flex items-center">
+		<div
+			class="w-full rounded shadow-lg p-8 m-4 md:max-w-4xl md:mx-auto border">
+			<h1 class="block w-full text-center mb-6 text-xl font-bold font-soehne">
+				Contact
+			</h1>
+			<!-- Success -->
+			<div
+				class="hidden block text-emerald-700 text-center pb-4 font-untitled"
+				id="result">
+				<p
+					class="whitespace-nowrap text-md px-2 py-0.5 bg-emerald-100 rounded-full">
+					Message sent!
+				</p>
+			</div>
+			<form
+				class="mb-4 md:flex md:flex-wrap md:justify-between font-untitled"
+				name="Contact Form"
+				method="post"
+				data-netlify="true"
+				netlify-honeypot="b156dz"
+				action="/">
+				<div class="flex flex-col mb-4 md:w-full">
+					<label
+						class="mb-2 uppercase tracking-wide font-semibold text-lg dark:text-white"
+						for="name">Name</label
+					>
+					<input
+						class="border py-2 px-3 text-black focus:outline focus:outline-orange-600"
+						type="text"
+						name="name"
+						required
+					/>
+				</div>
+				<div class="flex flex-col mb-4 md:w-full">
+					<label
+						class="mb-2 uppercase font-semibold text-lg dark:text-white"
+						for="email">Email</label
+					>
+					<input
+						class="border py-2 px-3 text-black focus:outline focus:outline-orange-600"
+						type="email"
+						name="email"
+						required
+					/>
+				</div>
+				<div class="flex flex-col mb-4 md:w-full">
+					<label
+						class="mb-2 uppercase font-semibold text-lg dark:text-white"
+						for="phone">Phone</label
+					>
+					<input
+						class="border py-2 px-3 text-black focus:outline focus:outline-orange-600"
+						type="tel"
+						name="phone"
+					/>
+				</div>
+				<div class="flex flex-col mb-6 md:w-full">
+					<label
+						class="mb-2 uppercase font-semibold text-lg text-black dark:text-white"
+						for="message">Message</label
+					>
+					<textarea
+						class="border py-2 px-3 text-black focus:outline focus:outline-orange-600"
+						name="message"
+						required></textarea>
+				</div>
+				<p class="hidden">
+					<label>
+						What are you contacting me in regard to? <input name="b156dz" />
+					</label>
+				</p>
+				<div class="flex flex-col mb-6 md:w-full">
+					<button
+						type="submit"
+						class="block bg-orange-600 hover:bg-orange-700 text-white font-bold py-2 px-4 rounded font-soehne"
+						>Send</button
+					>
+				</div>
+			</form>
+		</div>
+	</div>
+</Master>

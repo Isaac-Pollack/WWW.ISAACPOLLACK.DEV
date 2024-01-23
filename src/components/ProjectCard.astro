@@ -1,0 +1,38 @@
+---
+export interface Props {
+	title: string;
+	url: string;
+	description: string;
+	imageUrl: string;
+	imageAlt: string;
+	langs: string[];
+}
+
+const { title, url, description, imageUrl, imageAlt, langs } = Astro.props;
+---
+
+<a href={url} aria-label={`link to ${title} project`}>
+	<div
+		class="place-content-stretch border border-slate-400 dark:border-slate-700 flex flex-col h-full p-4 text-gray-700 dark:text-gray-300 bg-gray-200 dark:bg-gray-800 rounded-lg shadow-xl hover:opacity-75 dark:hover:opacity-75 hover:-translate-y-2 duration-300">
+		<div>
+			<img
+				src={imageUrl}
+				class="rounded max-w-full w-full h-3/4 min-w-full min-h-full"
+				alt={imageAlt}
+			/>
+		</div>
+		<h3 class="text-2xl text-center font-semibold p-2 font-soehne">{title}</h3>
+		<div class="text-center flex flex-row grow place-items-center flex-wrap">
+			<p class="p-2 mb-2 font-untitled w-full">{description}</p>
+			<div class="w-full">
+				{
+					langs.map((languages) => (
+						<p class="m-1 inline-block bg-gray-300 dark:bg-slate-700 rounded-full p-2 font-untitled">
+							{languages}
+						</p>
+					))
+				}
+			</div>
+		</div>
+	</div>
+</a>

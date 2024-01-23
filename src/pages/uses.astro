@@ -1,0 +1,226 @@
+---
+import Master from "@layouts/Master.astro";
+import UseCategory from "@components/UseCategory.astro";
+---
+
+<Master
+	title="Isaac Pollack - Uses"
+	description="My chosen tools for every day use, whether that be at work or at home, for fun or professionally.">
+	<link
+		href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+		rel="stylesheet"
+	/>
+
+	<!-- Uses Accordion -->
+	<div class="rounded border border-slate-500 dark:border-white">
+		<div class="p-6 shadow-sm text-black dark:text-white">
+			<h1 class="font-semibold text-2xl font-soehne text-center">Uses</h1>
+			<p
+				class="text-slate-600 dark:text-slate-400 font-untitled text-center mt-2">
+				Inspired by <a
+					href="https://uses.tech/"
+					target="_blank"
+					class="font-medium text-blue-600 dark:text-blue-500 no-underline hover:underline dark:hover:decoration-white hover:decoration-gray-800 underline-offset-2"
+					>uses.tech</a
+				>
+				by <a
+					href="https://wesbos.com/"
+					target="_blank"
+					class="font-medium text-blue-600 dark:text-blue-500 no-underline hover:underline dark:hover:decoration-white hover:decoration-gray-800 underline-offset-2"
+					>Wes Bos</a
+				>. These are the tools I use!
+			</p>
+
+			<!-- Divider -->
+			<div class="h-1 w-full mx-auto my-5 dark:border-slate-400"></div>
+
+			<UseCategory emoji="🖱️" title="Hardware">
+				<div class="flex flex-col">
+					<div class="overflow-x-auto sm:-mx-6 lg:-mx-8">
+						<div class="py-2 inline-block min-w-full sm:px-6 lg:px-8">
+							<table
+								class="min-w-full text-gray-900 dark:text-white whitespace-nowrap text-sm font-medium font-untitled">
+								<tbody>
+									<tr class="bb bt">
+										<td
+											class="pl-4 py-4 font-semibold sm:block md:table-cell lg:table-cell"
+											>Laptop:</td
+										>
+										<td class="pl-4 py-4 sm:block md:table-cell lg:table-cell">
+											Acer Aspire A515-43</td
+										>
+									</tr>
+									<tr class="bb">
+										<td class="pl-4 py-4 font-semibold">CPU:</td>
+										<td class="pl-4 py-4 whitespace-normal">
+											Intel i7-8700K CPU @ 3.70GHz</td
+										>
+									</tr>
+									<tr class="bb">
+										<td class="pl-4 py-4 font-semibold">GPU:</td>
+										<td class="pl-4 py-4 whitespace-normal">
+											ASRock Radeon RX 7900 XT Phantom OC 20GB
+										</td>
+									</tr>
+									<tr class="bb">
+										<td class="pl-4 py-4 font-semibold">Motherboard:</td>
+										<td class="pl-4 py-4 whitespace-normal">
+											ASUS ROG STRIX Z370-E GAMING</td
+										>
+									</tr>
+									<tr class="bb">
+										<td class="pl-4 py-4 font-semibold">Memory:</td>
+										<td class="pl-4 py-4 whitespace-normal">
+											Corsair Vengeance LPX 32GB DDR4</td
+										>
+									</tr>
+									<tr class="bb">
+										<td class="pl-4 py-4 font-semibold">Monitors:</td>
+										<td class="pl-4 py-4 whitespace-normal">
+											MSI Optix MAG274QRF QHD 165Hz G-Sync HDR IPS 27"
+										</td>
+									</tr>
+									<tr class="bb">
+										<td class="pl-4 py-4 font-semibold">Keyboard:</td>
+										<td class="pl-4 py-4 whitespace-normal">
+											Keychron K5 SE Wireless - Low Profile Gateron Brown
+										</td>
+									</tr>
+									<tr class="bb">
+										<td class="pl-4 py-4 font-semibold">Mouse:</td>
+										<td class="pl-4 py-4 whitespace-normal"> Logitech G502</td>
+									</tr>
+									<tr class="bb">
+										<td class="pl-4 py-4 font-semibold">Headset:</td>
+										<td class="pl-4 py-4 whitespace-normal">
+											Steelseries Arctic 3</td
+										>
+									</tr>
+									<tr>
+										<td class="pl-4 pt-4 font-semibold">Webcam:</td>
+										<td class="pl-4 pt-4"> Razer Kiyo</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+			</UseCategory>
+
+			<UseCategory emoji="🍦" title="Software">
+				<div class="ml-4">
+					<h3 class="mb-2">
+						<strong>Editors:</strong>
+					</h3>
+					<ul class="list-disc m-2 font-untitled">
+						<li class="ml-8">
+							VSCode with the <a
+								href="https://marketplace.visualstudio.com/items?itemName=Hermitter.oh-lucy-vscode"
+								class="font-medium text-blue-600 dark:text-blue-500 no-underline hover:underline dark:hover:decoration-white hover:decoration-gray-800 underline-offset-2x"
+								>oh lucy</a
+							> theme, <a
+								href="https://marketplace.visualstudio.com/items?itemName=PKief.material-icon-theme"
+								class="font-medium text-blue-600 dark:text-blue-500 no-underline hover:underline dark:hover:decoration-white hover:decoration-gray-800 underline-offset-2x"
+								>Material Icons</a
+							>, and the <a
+								href="https://www.jetbrains.com/lp/mono/"
+								class="font-medium text-blue-600 dark:text-blue-500 no-underline hover:underline dark:hover:decoration-white hover:decoration-gray-800 underline-offset-2x"
+								>Jetbrains Mono
+							</a>font without ligatures
+						</li>
+						<li class="ml-8">
+							<a
+								href="https://www.jetbrains.com/pycharm/"
+								class="font-medium text-blue-600 dark:text-blue-500 no-underline hover:underline dark:hover:decoration-white hover:decoration-gray-800 underline-offset-2x"
+								>Jetbrains PyCharm</a
+							> for any Python development.
+						</li>
+					</ul>
+
+					<p class="mb-2">
+						<strong>Browser:</strong>
+						<a
+							href="https://www.mozilla.org/en-US/firefox/developer/"
+							class="font-medium text-blue-600 dark:text-blue-500 no-underline hover:underline dark:hover:decoration-white hover:decoration-gray-800 underline-offset-2x">
+							Firefox Dev
+						</a>
+					</p>
+					<p class="mb-2">
+						<strong>Version Control:</strong>
+						<a
+							href="https://www.gitkraken.com/"
+							class="font-medium text-blue-600 dark:text-blue-500 no-underline hover:underline dark:hover:decoration-white hover:decoration-gray-800 underline-offset-2x">
+							Gitkraken
+						</a> - always.
+					</p>
+					<p class="mb-2">
+						<strong>Databases:</strong>
+						<a
+							href="https://www.jetbrains.com/datagrip/"
+							class="font-medium text-blue-600 dark:text-blue-500 no-underline hover:underline dark:hover:decoration-white hover:decoration-gray-800 underline-offset-2x">
+							Jetbrains DataGrip
+						</a>
+					</p>
+					<p class="mb-2">
+						<strong>Organisation:</strong>
+						<a
+							href="https://www.notion.so/"
+							class="font-medium text-blue-600 dark:text-blue-500 no-underline hover:underline dark:hover:decoration-white hover:decoration-gray-800 underline-offset-2x">
+							Notion
+						</a>
+					</p>
+					<p class="mb-2">
+						<strong>Social:</strong>
+						<a
+							href="https://discord.com/"
+							class="font-medium text-blue-600 dark:text-blue-500 no-underline hover:underline dark:hover:decoration-white hover:decoration-gray-800 underline-offset-2x">
+							Discord
+						</a>
+					</p>
+				</div>
+			</UseCategory>
+
+			<!-- Divider -->
+			<div class="h-1 w-full mx-auto bb my-5 dark:border-slate-400"></div>
+			<p
+				class="text-center text-slate-600 dark:text-slate-400 pb-2 font-soehne">
+				Updated: 23/01/2024
+			</p>
+		</div>
+
+		<script>
+			//TODO: typecast HTML Element
+			const accordionHeader = document.querySelectorAll(".accordion-header");
+			accordionHeader.forEach((header) => {
+				header.addEventListener("click", function () {
+					const accordionContent =
+						header.parentElement.querySelector(".accordion-content");
+					let accordionMaxHeight = accordionContent.style.maxHeight;
+
+					// Condition handling
+					if (accordionMaxHeight == "0px" || accordionMaxHeight.length == 0) {
+						accordionContent.style.maxHeight = `${
+							accordionContent.scrollHeight + 32
+						}px`;
+						header.querySelector(".fas").classList.remove("fa-plus");
+						header.querySelector(".fas").classList.add("fa-minus");
+						header.parentElement.classList.add("bg-indigo-100");
+						header.parentElement.classList.add("dark:bg-slate-800");
+						header.parentElement.classList.add("border");
+						header.parentElement.classList.add("border-slate-500");
+						header.parentElement.classList.add("dark:border-white");
+					} else {
+						accordionContent.style.maxHeight = `0px`;
+						header.querySelector(".fas").classList.add("fa-plus");
+						header.querySelector(".fas").classList.remove("fa-minus");
+						header.parentElement.classList.remove("bg-indigo-100");
+						header.parentElement.classList.remove("dark:bg-slate-800");
+						header.parentElement.classList.remove("border");
+						header.parentElement.classList.remove("border-slate-500");
+						header.parentElement.classList.remove("dark:border-white");
+					}
+				});
+			});
+		</script>
+	</div>
+</Master>

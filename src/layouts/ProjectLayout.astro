@@ -1,0 +1,95 @@
+---
+import Master from "./Master.astro";
+
+const { frontmatter } = Astro.props;
+const live_visible = frontmatter.code.show_live;
+const source_visible = frontmatter.code.show_source;
+
+const glob: Record<string, () => Promise<unknown>> = import.meta.glob("/public/project_images/*/*.{png,jpeg,gif}");
+
+const images = Object.keys(glob)
+      .map((img) => img.replace("/public", ""))
+      .filter((img) => img.includes(frontmatter.image.gallery))
+
+console.log('\n', images, '\n', '~ Loaded into', `${Astro.url}`, 'gallery.', '\n')
+---
+
+<Master title={frontmatter.title} description={frontmatter.description}>
+  <div class="flex justify-center flex-col m-4 items-center">
+    <div class="mb-6 content-center">
+      <h1 class="text-xl mb-4 text-center font-bold tracking-wide font-soehne">
+        {frontmatter.name}
+      </h1>
+
+      <div class="border border-slate-400 dark:border-slate-700">
+        <img src={frontmatter.image.url} class="object-fill max-w-2xl h-3/4 w-full rounded p-2" alt={frontmatter.image.alt} />
+      </div>
+    </div>
+
+    <div class="flex flex-wrap mt-2 justify-center">
+      <!-- Live Preview -->
+      {
+      live_visible && (
+      <div class="m-3 transition-transform ease-in-out hover:-translate-y-1 duration-300">
+        <a href={frontmatter.code.live} target="_blank" rel="noopener noreferrer" aria-label={`link to ${frontmatter.name} live preview`}>
+          <button type="button" class="shadow-md text-white bg-[#24292F] hover:bg-[#3A424C] font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center mr-2 mb-2 font-soehne">
+            <svg class="mr-3 -ml-1 w-4 h-4" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" viewBox="0 35 512 512">
+              <path fill="currentColor" d="M352 0c-12.9 0-24.6 7.8-29.6 19.8s-2.2 25.7 6.9 34.9L370.7 96 201.4 265.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L416 141.3l41.4 41.4c9.2 9.2 22.9 11.9 34.9 6.9s19.8-16.6 19.8-29.6V32c0-17.7-14.3-32-32-32H352zM80 32C35.8 32 0 67.8 0 112V432c0 44.2 35.8 80 80 80H400c44.2 0 80-35.8 80-80V320c0-17.7-14.3-32-32-32s-32 14.3-32 32V432c0 8.8-7.2 16-16 16H80c-8.8 0-16-7.2-16-16V112c0-8.8 7.2-16 16-16H192c17.7 0 32-14.3 32-32s-14.3-32-32-32H80z" />
+            </svg>
+            LIVE DEMO
+          </button>
+        </a>
+      </div>
+      )
+      }
+
+      <!-- Source Code -->
+      {
+      source_visible && (
+      <div class="m-3 transition-transform ease-in-out hover:-translate-y-1 duration-300">
+        <a href={frontmatter.code.source} target="_blank" rel="noopener noreferrer" aria-label={`link to ${frontmatter.name} source code`}>
+          <button type="button" class="shadow-md text-white bg-[#24292F] hover:bg-[#3A424C] font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center mr-2 mb-2 font-soehne">
+            <svg class="mr-3 -ml-1 w-4 h-4" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" viewBox="05 35 450 450">
+              <path fill="currentColor" d="M439.55 236.05L244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z" />
+            </svg>
+            SOURCE CODE
+          </button>
+        </a>
+      </div>
+      )
+      }
+    </div>
+
+    <!-- PROJECT CONTENT -->
+    <article class="mb-4 font-untitled">
+      <div class="m-6 prose prose-slate dark:prose-invert max-w-none prose-headings:font-soehne prose-headings:underline prose-code:p-1 prose-code:font-medium prose-code:bg-slate-300 dark:prose-code:bg-slate-700 md:prose-base lg:prose-base">
+        <slot />
+      </div>
+
+      { images.length > 0 &&
+				<div>
+					<!-- PROJECT GALLERY -->
+					<h2 class="text-xl m-4 mt-8 text-center font-bold tracking-wide font-soehne">
+						Gallery
+					</h2>
+
+					<!-- Divider -->
+					<div class="h-1 w-full border-b my-6 dark:border-slate-400 mb-11">
+					</div>
+
+					<div class="grid items-stretch gap-12 sm:grid-cols-1 md:grid-cols-2 2xl:grid-cols-3 mx-6 content-center place-items-center">
+						{
+              images.map((img) => (
+                <img src={img} class="rounded-md transition duration-200 ease-in-out hover:scale-110" alt={img} />
+              ))
+						}
+					</div>
+
+					<!-- Divider -->
+					<div class="h-1 w-full mx-auto border-b my-5 dark:border-slate-400 mt-11">
+					</div>
+				</div>
+      }
+    </article>
+  </div>
+</Master>

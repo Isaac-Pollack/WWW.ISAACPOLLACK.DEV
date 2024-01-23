@@ -1,0 +1,101 @@
+---
+import ThemeToggler from "./ThemeToggler.astro";
+import NavLink from "./NavLink.astro";
+
+const NavLinks = [
+	{
+		name: "Projects",
+		href: "/projects",
+	},
+	{
+		name: "Uses",
+		href: "/uses",
+	},
+	{
+		name: "Contact",
+		href: "/contact",
+	},
+];
+---
+
+<header
+	class="sticky top-0 left-0 right-0 bg-slate-100 dark:bg-slate-900 bg-opacity-70 dark:bg-opacity-70 backdrop-blur z-10"
+	aria-label="Site Header">
+	<!-- Navbar -->
+	<div
+		class="grid grid-cols-3 sm:space-x-2 md:space-x-6 space-x-12 justify-items-center items-center">
+		<a
+			href="/"
+			rel="noopener noreferrer"
+			aria-label="Home"
+			class="ml-4 text-2xl tracking-wide font-extrabold text-gray-900 dark:text-white py-2 transition-transform ease-in-out hover:-translate-y-1 duration-300 font-soehne sm:ml-8">
+			<h1>Isaac</h1><span class="text-orange-600">Pollack</span>
+		</a>
+
+		<nav class="hidden md:block" role="navigation">
+			{NavLinks.map((link) => <NavLink {...link} />)}
+		</nav>
+		<!-- Burger Menu -->
+		<div
+			class="md:hidden flex items-center transition-transform ease-in-out hover:-translate-y-1 duration-300"
+			id="styled-svg">
+			<button class="outline-none menu-button p-2">
+				<svg
+					class="w-6 h-6 text-gray-500 stroke-current"
+					x-show="! showMenu"
+					fill="none"
+					stroke-linecap="round"
+					stroke-linejoin="round"
+					stroke-width="2"
+					viewBox="0 00 24 24"
+					><path d="m4 6h16M4 12h16M4 18h16"><path> </path></path>
+				</svg>
+			</button>
+		</div>
+		<div>
+			<ThemeToggler />
+		</div>
+	</div>
+	<!-- Mobile Navbar -->
+	<div class="hidden mobile-menu">
+		<div
+			class="flex flex-col w-full h-full justify-center items-center gap-12 w-screen h-screen px-8 py-20 bg-slate-100 dark:bg-slate-900 border-b border-b-slate-700 md:hidden">
+			<nav class="flex flex-col gap-4 z-50">
+				{NavLinks.map((link) => <NavLink {...link} />)}
+			</nav>
+			<div class="flex flex-row space-x-4">
+				<button
+					type="button"
+					aria-label="Close menu"
+					class="p-2 transition-transform ease-in-out hover:-translate-y-1 duration-300 exit text-gray-500">
+					<svg
+						xmlns="http://www.w3.org/2000/svg"
+						width="24"
+						height="24"
+						viewBox="0 0 24 24"
+						fill="none"
+						stroke="currentColor"
+						stroke-width="2"
+						stroke-linecap="round"
+						stroke-linejoin="round"
+						><polyline points="9 10 4 15 9 20"></polyline><path
+							d="M20 4v7a4 4 0 0 1-4 4H4"></path>
+					</svg>
+				</button>
+			</div>
+		</div>
+	</div>
+</header>
+
+<script>
+	// Menu Logic
+	const btn = document.querySelector("button.menu-button");
+	const menu = document.querySelector(".mobile-menu");
+	const exit = document.querySelector(".exit");
+	btn.addEventListener("click", () => {
+		menu.classList.toggle("hidden");
+	});
+	exit.addEventListener("click", () => {
+		menu.classList.toggle("hidden");
+	});
+</script>
