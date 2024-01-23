@@ -1,5 +1,5 @@
 ---
-draft: true
+draft: false
 layout: ../../layouts/ProjectLayout.astro
 title: 'Isaac Pollack - F1 Frontend Project' # The browser tab title
 name: F1 Frontend # What appears in the Project page
